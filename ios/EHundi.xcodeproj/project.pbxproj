@@ -8,31 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* EHundiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* EHundiTests.m */; };
+		04FA8B3CECA3433D91662D11 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FE9BA9659E6403C91492283 /* Poppins-SemiBoldItalic.ttf */; };
+		090D39D5FCFA44809F6FEE83 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AF006E88DC440AEA98BC15F /* Poppins-ThinItalic.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		DEE0A8D6BA4648FCD95343D9 /* libPods-EHundi-EHundiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FA421ABAC5A10EDC3D05AB /* libPods-EHundi-EHundiTests.a */; };
-		DFDF5112F21339BEB7C1212F /* libPods-EHundi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF110754DDA95ADD7257332 /* libPods-EHundi.a */; };
-		7CE1C6EB0E4148DB9E9F96FE /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 038774641A21462E8DFE9BF2 /* Poppins-Black.ttf */; };
-		D44B3EF7B6F340EB9C54C191 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B99F33FC04C4FFDA448DA3F /* Poppins-BlackItalic.ttf */; };
-		B8F85701788442ADA29565D7 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F2BD6E286547C182625103 /* Poppins-Bold.ttf */; };
-		FBD2765988354C97B0C968D7 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC03515BF914AD9BEC51162 /* Poppins-BoldItalic.ttf */; };
 		361DB5B05BA64DC691E0B0A1 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A1173EF43B14B93B8D02976 /* Poppins-ExtraBold.ttf */; };
-		B805B85BBD3A4E3492C59960 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD61BE3B199D422CA5CD34D4 /* Poppins-ExtraBoldItalic.ttf */; };
-		9B11D4D2CA58499C8AADF23A /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BC8A312A5CC40CE9422A64E /* Poppins-ExtraLight.ttf */; };
-		893508AE2F2B48DAAA623ECB /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97986CAB9D46ACBFF85280 /* Poppins-ExtraLightItalic.ttf */; };
-		F1A6F02EFE8B4BE6A499BC1C /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5148F7F2201D44C78B9235DA /* Poppins-Italic.ttf */; };
+		374EB5F8136A437890766A61 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B50A197BA1A42CEBDDC0156 /* Poppins-Medium.ttf */; };
+		3CDD7C2F14AB4BB28E100B37 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD1611D6C63A4C58BFFAC957 /* Poppins-SemiBold.ttf */; };
+		3D69EE1F2B8046279D9A1CDC /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 087194DC804A4D4D8B12A2EA /* Poppins-MediumItalic.ttf */; };
 		4E4A75FC4EF14E2F920613D1 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CA1990A4F0A46B3AFB21A73 /* Poppins-Light.ttf */; };
 		4F29B4489078434D9EA26D5F /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B6D0DC1AD114DA8BFB2ED22 /* Poppins-LightItalic.ttf */; };
-		374EB5F8136A437890766A61 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B50A197BA1A42CEBDDC0156 /* Poppins-Medium.ttf */; };
-		3D69EE1F2B8046279D9A1CDC /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 087194DC804A4D4D8B12A2EA /* Poppins-MediumItalic.ttf */; };
+		7CE1C6EB0E4148DB9E9F96FE /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 038774641A21462E8DFE9BF2 /* Poppins-Black.ttf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		893508AE2F2B48DAAA623ECB /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97986CAB9D46ACBFF85280 /* Poppins-ExtraLightItalic.ttf */; };
+		9B11D4D2CA58499C8AADF23A /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BC8A312A5CC40CE9422A64E /* Poppins-ExtraLight.ttf */; };
 		B53347720BDF49E58B91D65B /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3AB5FFE43D0441CC9F2400E6 /* Poppins-Regular.ttf */; };
-		3CDD7C2F14AB4BB28E100B37 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD1611D6C63A4C58BFFAC957 /* Poppins-SemiBold.ttf */; };
-		04FA8B3CECA3433D91662D11 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FE9BA9659E6403C91492283 /* Poppins-SemiBoldItalic.ttf */; };
-		C3FDF60748734E7F8B499100 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13AC85AEE973433F8E15F3D3 /* Poppins-Thin.ttf */; };
-		090D39D5FCFA44809F6FEE83 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AF006E88DC440AEA98BC15F /* Poppins-ThinItalic.ttf */; };
+		B805B85BBD3A4E3492C59960 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD61BE3B199D422CA5CD34D4 /* Poppins-ExtraBoldItalic.ttf */; };
+		B8F85701788442ADA29565D7 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F2BD6E286547C182625103 /* Poppins-Bold.ttf */; };
 		C009E6DDF47142AE9F6CCCF6 /* Redressed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E0D88D133C64903AF7BCBEB /* Redressed-Regular.ttf */; };
+		C2C769784A65712B6FC90CFD /* libPods-EHundi-EHundiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A794671B66F923F94AF2BC /* libPods-EHundi-EHundiTests.a */; };
+		C3FDF60748734E7F8B499100 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13AC85AEE973433F8E15F3D3 /* Poppins-Thin.ttf */; };
+		D44B3EF7B6F340EB9C54C191 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B99F33FC04C4FFDA448DA3F /* Poppins-BlackItalic.ttf */; };
+		DC91EEE26FE276E62D0329C0 /* libPods-EHundi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 877ADE02284A4B87AD43FFFD /* libPods-EHundi.a */; };
+		F1A6F02EFE8B4BE6A499BC1C /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5148F7F2201D44C78B9235DA /* Poppins-Italic.ttf */; };
+		FBD2765988354C97B0C968D7 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC03515BF914AD9BEC51162 /* Poppins-BoldItalic.ttf */; };
 		FEA897E301594FDB894737C7 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D2D1ED1A3E04C09A278A2F5 /* OFL.txt */; };
 /* End PBXBuildFile section */
 
@@ -50,40 +50,40 @@
 		00E356EE1AD99517003FC87E /* EHundiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EHundiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* EHundiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EHundiTests.m; sourceTree = "<group>"; };
+		038774641A21462E8DFE9BF2 /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
+		087194DC804A4D4D8B12A2EA /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-MediumItalic.ttf"; path = "../src/assets/fonts/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		0BC8A312A5CC40CE9422A64E /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLight.ttf"; path = "../src/assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		0E0D88D133C64903AF7BCBEB /* Redressed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Redressed-Regular.ttf"; path = "../src/assets/fonts/Redressed-Regular.ttf"; sourceTree = "<group>"; };
+		13AC85AEE973433F8E15F3D3 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* EHundi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EHundi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EHundi/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = EHundi/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = EHundi/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = EHundi/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EHundi/main.m; sourceTree = "<group>"; };
-		1F00E69FCB79C69C246F5E0E /* Pods-EHundi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHundi.debug.xcconfig"; path = "Target Support Files/Pods-EHundi/Pods-EHundi.debug.xcconfig"; sourceTree = "<group>"; };
-		44FA421ABAC5A10EDC3D05AB /* libPods-EHundi-EHundiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EHundi-EHundiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FF110754DDA95ADD7257332 /* libPods-EHundi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EHundi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D2D1ED1A3E04C09A278A2F5 /* OFL.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = OFL.txt; path = ../src/assets/fonts/OFL.txt; sourceTree = "<group>"; };
+		3AB5FFE43D0441CC9F2400E6 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		3CA1990A4F0A46B3AFB21A73 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		4B50A197BA1A42CEBDDC0156 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		4CD5D38E3748D5CA0AF4A445 /* Pods-EHundi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHundi.release.xcconfig"; path = "Target Support Files/Pods-EHundi/Pods-EHundi.release.xcconfig"; sourceTree = "<group>"; };
+		5148F7F2201D44C78B9235DA /* Poppins-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Italic.ttf"; path = "../src/assets/fonts/Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		52F2BD6E286547C182625103 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		5A1173EF43B14B93B8D02976 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5E97986CAB9D46ACBFF85280 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLightItalic.ttf"; path = "../src/assets/fonts/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		6AF006E88DC440AEA98BC15F /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ThinItalic.ttf"; path = "../src/assets/fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		6B6D0DC1AD114DA8BFB2ED22 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-LightItalic.ttf"; path = "../src/assets/fonts/Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		6FE9BA9659E6403C91492283 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		71A794671B66F923F94AF2BC /* libPods-EHundi-EHundiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EHundi-EHundiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = EHundi/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B1870432934B6CF49070FEB4 /* Pods-EHundi-EHundiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHundi-EHundiTests.debug.xcconfig"; path = "Target Support Files/Pods-EHundi-EHundiTests/Pods-EHundi-EHundiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		877ADE02284A4B87AD43FFFD /* libPods-EHundi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EHundi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D0027F86B2A3F2BA4AA8B8 /* Pods-EHundi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHundi.debug.xcconfig"; path = "Target Support Files/Pods-EHundi/Pods-EHundi.debug.xcconfig"; sourceTree = "<group>"; };
+		9B99F33FC04C4FFDA448DA3F /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BlackItalic.ttf"; path = "../src/assets/fonts/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		AD61BE3B199D422CA5CD34D4 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		B276CAEEB59FD94847DDCC7A /* Pods-EHundi-EHundiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHundi-EHundiTests.release.xcconfig"; path = "Target Support Files/Pods-EHundi-EHundiTests/Pods-EHundi-EHundiTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD1611D6C63A4C58BFFAC957 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		DAC03515BF914AD9BEC51162 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BoldItalic.ttf"; path = "../src/assets/fonts/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		ED4002017F56F9EE06CB4CDB /* Pods-EHundi-EHundiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHundi-EHundiTests.release.xcconfig"; path = "Target Support Files/Pods-EHundi-EHundiTests/Pods-EHundi-EHundiTests.release.xcconfig"; sourceTree = "<group>"; };
-		F0873153D3515A0FF5B6BF6C /* Pods-EHundi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHundi.release.xcconfig"; path = "Target Support Files/Pods-EHundi/Pods-EHundi.release.xcconfig"; sourceTree = "<group>"; };
-		038774641A21462E8DFE9BF2 /* Poppins-Black.ttf */ = {isa = PBXFileReference; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9B99F33FC04C4FFDA448DA3F /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-BlackItalic.ttf"; path = "../src/assets/fonts/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		52F2BD6E286547C182625103 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DAC03515BF914AD9BEC51162 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-BoldItalic.ttf"; path = "../src/assets/fonts/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5A1173EF43B14B93B8D02976 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AD61BE3B199D422CA5CD34D4 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0BC8A312A5CC40CE9422A64E /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraLight.ttf"; path = "../src/assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5E97986CAB9D46ACBFF85280 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraLightItalic.ttf"; path = "../src/assets/fonts/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5148F7F2201D44C78B9235DA /* Poppins-Italic.ttf */ = {isa = PBXFileReference; name = "Poppins-Italic.ttf"; path = "../src/assets/fonts/Poppins-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3CA1990A4F0A46B3AFB21A73 /* Poppins-Light.ttf */ = {isa = PBXFileReference; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6B6D0DC1AD114DA8BFB2ED22 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-LightItalic.ttf"; path = "../src/assets/fonts/Poppins-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4B50A197BA1A42CEBDDC0156 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		087194DC804A4D4D8B12A2EA /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-MediumItalic.ttf"; path = "../src/assets/fonts/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3AB5FFE43D0441CC9F2400E6 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CD1611D6C63A4C58BFFAC957 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6FE9BA9659E6403C91492283 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		13AC85AEE973433F8E15F3D3 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6AF006E88DC440AEA98BC15F /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-ThinItalic.ttf"; path = "../src/assets/fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0E0D88D133C64903AF7BCBEB /* Redressed-Regular.ttf */ = {isa = PBXFileReference; name = "Redressed-Regular.ttf"; path = "../src/assets/fonts/Redressed-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1D2D1ED1A3E04C09A278A2F5 /* OFL.txt */ = {isa = PBXFileReference; name = "OFL.txt"; path = "../src/assets/fonts/OFL.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F9C4FD83A9188C97AE68EC1E /* Pods-EHundi-EHundiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHundi-EHundiTests.debug.xcconfig"; path = "Target Support Files/Pods-EHundi-EHundiTests/Pods-EHundi-EHundiTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEE0A8D6BA4648FCD95343D9 /* libPods-EHundi-EHundiTests.a in Frameworks */,
+				C2C769784A65712B6FC90CFD /* libPods-EHundi-EHundiTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFDF5112F21339BEB7C1212F /* libPods-EHundi.a in Frameworks */,
+				DC91EEE26FE276E62D0329C0 /* libPods-EHundi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,8 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				4FF110754DDA95ADD7257332 /* libPods-EHundi.a */,
-				44FA421ABAC5A10EDC3D05AB /* libPods-EHundi-EHundiTests.a */,
+				877ADE02284A4B87AD43FFFD /* libPods-EHundi.a */,
+				71A794671B66F923F94AF2BC /* libPods-EHundi-EHundiTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,19 +178,8 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1F00E69FCB79C69C246F5E0E /* Pods-EHundi.debug.xcconfig */,
-				F0873153D3515A0FF5B6BF6C /* Pods-EHundi.release.xcconfig */,
-				B1870432934B6CF49070FEB4 /* Pods-EHundi-EHundiTests.debug.xcconfig */,
-				ED4002017F56F9EE06CB4CDB /* Pods-EHundi-EHundiTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		938354B33F474DD99A840079 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				038774641A21462E8DFE9BF2 /* Poppins-Black.ttf */,
 				9B99F33FC04C4FFDA448DA3F /* Poppins-BlackItalic.ttf */,
@@ -214,8 +203,19 @@
 				1D2D1ED1A3E04C09A278A2F5 /* OFL.txt */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99D0027F86B2A3F2BA4AA8B8 /* Pods-EHundi.debug.xcconfig */,
+				4CD5D38E3748D5CA0AF4A445 /* Pods-EHundi.release.xcconfig */,
+				F9C4FD83A9188C97AE68EC1E /* Pods-EHundi-EHundiTests.debug.xcconfig */,
+				B276CAEEB59FD94847DDCC7A /* Pods-EHundi-EHundiTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -224,12 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "EHundiTests" */;
 			buildPhases = (
-				59E31DB16B8D1A19A484BFBD /* [CP] Check Pods Manifest.lock */,
+				ACAC1F42A002125CA9AE3BF1 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				F253DBD665EFE92422FD315E /* [CP] Embed Pods Frameworks */,
-				53CD3A5DCF490DFE6AA9190E /* [CP] Copy Pods Resources */,
+				4D7A011088B2ED8D8C7729E8 /* [CP] Embed Pods Frameworks */,
+				E116942B92145A52906FDEB0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,13 +245,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "EHundi" */;
 			buildPhases = (
-				CE0CB7F92826B8B29CB7E0F4 /* [CP] Check Pods Manifest.lock */,
+				0473071BC99A2AAA5A057358 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				8177CED88FB5775A7218AE69 /* [CP] Embed Pods Frameworks */,
-				5C43E73FDC74291DA4A8231B /* [CP] Copy Pods Resources */,
+				F7747CEF7EC9E7D29AD950D5 /* [CP] Embed Pods Frameworks */,
+				0F800B1D59EA321CCCCE66BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -354,80 +354,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		53CD3A5DCF490DFE6AA9190E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EHundi-EHundiTests/Pods-EHundi-EHundiTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EHundi-EHundiTests/Pods-EHundi-EHundiTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EHundi-EHundiTests/Pods-EHundi-EHundiTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		59E31DB16B8D1A19A484BFBD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EHundi-EHundiTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5C43E73FDC74291DA4A8231B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EHundi/Pods-EHundi-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EHundi/Pods-EHundi-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EHundi/Pods-EHundi-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8177CED88FB5775A7218AE69 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EHundi/Pods-EHundi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EHundi/Pods-EHundi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EHundi/Pods-EHundi-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE0CB7F92826B8B29CB7E0F4 /* [CP] Check Pods Manifest.lock */ = {
+		0473071BC99A2AAA5A057358 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,7 +376,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F253DBD665EFE92422FD315E /* [CP] Embed Pods Frameworks */ = {
+		0F800B1D59EA321CCCCE66BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EHundi/Pods-EHundi-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EHundi/Pods-EHundi-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EHundi/Pods-EHundi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D7A011088B2ED8D8C7729E8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -464,6 +408,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EHundi-EHundiTests/Pods-EHundi-EHundiTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACAC1F42A002125CA9AE3BF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EHundi-EHundiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E116942B92145A52906FDEB0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EHundi-EHundiTests/Pods-EHundi-EHundiTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EHundi-EHundiTests/Pods-EHundi-EHundiTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EHundi-EHundiTests/Pods-EHundi-EHundiTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7747CEF7EC9E7D29AD950D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EHundi/Pods-EHundi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EHundi/Pods-EHundi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EHundi/Pods-EHundi-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -499,7 +499,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1870432934B6CF49070FEB4 /* Pods-EHundi-EHundiTests.debug.xcconfig */;
+			baseConfigurationReference = F9C4FD83A9188C97AE68EC1E /* Pods-EHundi-EHundiTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -526,7 +526,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED4002017F56F9EE06CB4CDB /* Pods-EHundi-EHundiTests.release.xcconfig */;
+			baseConfigurationReference = B276CAEEB59FD94847DDCC7A /* Pods-EHundi-EHundiTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -550,7 +550,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F00E69FCB79C69C246F5E0E /* Pods-EHundi.debug.xcconfig */;
+			baseConfigurationReference = 99D0027F86B2A3F2BA4AA8B8 /* Pods-EHundi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -577,7 +577,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0873153D3515A0FF5B6BF6C /* Pods-EHundi.release.xcconfig */;
+			baseConfigurationReference = 4CD5D38E3748D5CA0AF4A445 /* Pods-EHundi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
