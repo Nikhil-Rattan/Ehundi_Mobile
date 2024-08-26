@@ -3,7 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import AuthStackNavigator from './AuthStack';
 import MainStackNavigator from './MainStack';
 import { useSelector } from 'react-redux';
-import { AllReducer } from '@type/redux';
+import { AllReducer } from '../types/redux';
+
 const RouteScreen = () => {
     const { userData } = useSelector((state: AllReducer) => state.auth || {});
 

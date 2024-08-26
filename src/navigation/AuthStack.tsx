@@ -1,4 +1,4 @@
-import { Login, SignUp, ForgotPassword, TwoFactor } from "@screens/index";
+import { Login, SignUp, ForgotPassword, TwoFactor } from "../screens";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { AuthStackParamList } from "./types";
 

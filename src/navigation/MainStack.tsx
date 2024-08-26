@@ -1,4 +1,4 @@
-import { Profile, Home } from "@screens/index";
+import { Profile, Home } from "../screens";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { HomeStackParamList } from "./types";
 
