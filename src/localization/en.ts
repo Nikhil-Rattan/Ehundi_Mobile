@@ -17,7 +17,14 @@ export const en = {
         confirmPassword: "ConfirmPassword",
         createAccount: "Create Account",
         login: "Log in",
-        signUp: "Sign up"
+        signUp: "Sign up",
+        otpSent:"OTP has been sent to your register mobile number"
+    },
+    otp: {
+        otpVerification: "OTP Verification",
+        verificationCode:"Verification Code Sent to",
+        resendOtp:'Resend OTP',
+        next:'Next >'
     },
     error: {
         isRequired: "is required.",

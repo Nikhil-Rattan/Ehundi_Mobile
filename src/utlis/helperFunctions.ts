@@ -1,20 +1,31 @@
-import { fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { url } from "../config/url";
+import { showMessage } from 'react-native-flash-message';
 
-const createBaseQuery = () => {
-    return fetchBaseQuery({
-        baseUrl: url.API_BASE_URL,
-        timeout: 10000,
-        prepareHeaders: (headers: Headers, { getState }: { getState: () => any }) => {
-            const token = getState()?.auth?.userData?.access_token;
-            if (token != null) {
-
-                headers.set('Authorization', `Bearer ${token}`);
-            }
-            headers.set('Content-Type', 'application/json');
-            return headers;
-        },
-    });
+const showError = (message: string): void => {
+  showMessage({
+    type: 'danger',
+    message,
+  });
 };
 
-export { createBaseQuery };
+const showSuccess = (message: string): void => {
+  showMessage({
+    type: 'success',
+    message,
+  });
+};
+
+const showInfo = (message: string): void => {
+  showMessage({
+    type: 'info',
+    message,
+  });
+};
+
+const showWarning = (message: string): void => {
+  showMessage({
+    type: 'warning',
+    message,
+  });
+};
+
+export { showError, showSuccess, showInfo, showWarning };

@@ -5,6 +5,8 @@ import useSignUpForm from "./useSignUpForm";
 import { SignUpFormValues } from "../../../../types";
 import { useState } from "react";
 import { removeEmojis } from "../../../../utlis/validations";
+import { showSuccess } from "../../../../utlis/helperFunctions";
+import strings from "../../../../localization";
 
 
 export const useSignUp = () => {
@@ -40,6 +42,8 @@ export const useSignUp = () => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
+            resetValues()
+            showSuccess(strings.signUp.otpSent)
             navigation.navigate('TwoFactoAuth')
         }, 800);
 

@@ -1,7 +1,7 @@
 import { View, Text, StatusBar, ImageBackground, Image, Platform, TouchableOpacity, SafeAreaView } from 'react-native';
 import React from 'react';
 import { COLORS } from '../../../theme/colors';
-import commonStyles from '../../../theme/commonStyles';
+import commonStyles, { hitSlopProp } from '../../../theme/commonStyles';
 import { IMAGES } from '../../../assets';
 import { styles } from './SignUp.styles';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -46,7 +46,8 @@ const Login = () => {
               </Text>
               <TouchableOpacity
                 activeOpacity={0.7}
-                onPress={onLoginPress}>
+                onPress={onLoginPress}
+                hitSlop={hitSlopProp}>
                 <Image source={IMAGES.crossIcon} style={commonStyles.icon20} />
               </TouchableOpacity>
             </View>

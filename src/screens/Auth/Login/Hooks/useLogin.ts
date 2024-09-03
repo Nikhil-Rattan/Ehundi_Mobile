@@ -38,6 +38,7 @@ export const useLogin = () => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
+            resetValues()
             navigation.navigate('TwoFactoAuth')
         }, 800);
     }

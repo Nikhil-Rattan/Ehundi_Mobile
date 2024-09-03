@@ -7,7 +7,7 @@ import {
 } from "@reduxjs/toolkit/query/react";
 // @ts-ignore
 import { EndpointBuilder } from "@reduxjs/toolkit/dist/query/endpointDefinitions";
-import { createBaseQuery } from "../../../utlis/helperFunctions";
+import { createBaseQuery } from "../../../utlis/commonFunctions";
 import { MMKV } from "react-native-mmkv";
 import { LocalStorage, UserDataProps } from "../../../types/redux";
 
