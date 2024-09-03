@@ -5,6 +5,8 @@ export const IMAGES = {
 
 
     // Icons
-    backIcon: require("./icons/back.png")
+    backIcon: require("./icons/back.png"),
+    openEyeIcon:require("./icons/openEye.png"),
+    closeEyeIcon:require("./icons/closeEye.png")
 
 };

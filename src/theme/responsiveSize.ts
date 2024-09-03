@@ -1,9 +1,6 @@
 import { Dimensions, Platform, StatusBar } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
-const LANDSCAPE = 'landscape';
-const PORTRAIT = 'portrait';
-
 const X_WIDTH = 375;
 const X_HEIGHT = 812;
 

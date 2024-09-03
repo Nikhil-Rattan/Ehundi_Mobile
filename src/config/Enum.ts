@@ -1,14 +1,22 @@
-export const ImageEnum ={
-    contain:'contain',
-    cover:'cover',
-    center:'center',
-    stretch:'stretch'
+enum ImageResizeMode {
+    Contain = 'contain',
+    Cover = 'cover',
+    Center = 'center',
+    Stretch = 'stretch', // Ensure this matches the actual value expected
 }
-export const AutoCapitalizeEnum ={
-    none:'none',
-    characters:'characters',
-    sentences:'sentences',
-    words:'words'
+
+export const ImageEnum = {
+    contain: ImageResizeMode.Contain,
+    cover: ImageResizeMode.Cover,
+    center: ImageResizeMode.Center,
+    stretch: ImageResizeMode.Stretch,
+};
+
+export const AutoCapitalizeEnum = {
+    none: 'none',
+    characters: 'characters',
+    sentences: 'sentences',
+    words: 'words'
 }
 
 enum Position {
@@ -21,8 +29,8 @@ export const positionEnum = {
     bottom: Position.BOTTOM,
 };
 export const keyboardTypeEnum = {
-    numeric:'numeric',
-    phonePad:'phone-pad',
-    email:'email-address',
-    decimal:'decimal-pad'
+    numeric: 'numeric',
+    phonePad: 'phone-pad',
+    email: 'email-address',
+    decimal: 'decimal-pad'
 }
