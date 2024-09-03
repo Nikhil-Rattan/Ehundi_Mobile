@@ -1,4 +1,4 @@
-import { View, Text, StatusBar, ImageBackground, Image, Platform, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, Text, StatusBar, ImageBackground, Image, Platform, TouchableOpacity, SafeAreaView, TextInput } from 'react-native';
 import React from 'react';
 import { COLORS } from '../../../theme/colors';
 import commonStyles, { hitSlopProp } from '../../../theme/commonStyles';
@@ -66,6 +66,37 @@ const Login = () => {
               keyboardType='email-address'
               errorMessage={formik.errors.email ? formik.errors.email : ""}
             />
+            <View style={[styles.inputContainer]}>
+              <Text style={styles.labelTxtStyle}>{strings.signUp.phoneNumber}</Text>
+              <View style={[styles.inputContainerView]}>
+                <View style={styles.countryCodeContainer}>
+                  <Text style={commonStyles.regular16}>
+                    {strings.placeHolder.countryCodePlaceHolder}
+                  </Text>
+                </View>
+                <View style={styles.inputFlex}>
+                  {!formik.values.phoneNumber && (
+                    <Text style={styles.customPlaceholder}>
+                      {strings.placeHolder.phoneNumberPlaceHolder}
+                    </Text>
+                  )}
+                  <TextInput
+                    style={{ ...styles.inputStyle }}
+                    value={formik.values.phoneNumber}
+                    onChangeText={(value: string) => handleInputChange('phoneNumber', value)}
+                    keyboardType={'phone-pad'}
+                    maxLength={10}
+                    cursorColor={COLORS.PRIMARY_ORANGE}
+                  />
+                </View>
+              </View>
+              {formik.errors.phoneNumber ?
+                <Text style={styles.errorStyle}>
+                  {formik.errors.phoneNumber}
+                </Text>
+                : null}
+
+            </View>
             <CustomInput
               label={strings.signUp.password}
               value={formik.values.password}

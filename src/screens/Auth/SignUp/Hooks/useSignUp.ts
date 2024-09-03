@@ -16,6 +16,7 @@ export const useSignUp = () => {
         initialValues: {
             fullName: '',
             email: '',
+            phoneNumber:'',
             password: '',
             confirmPassword: ''
         },
@@ -28,6 +29,7 @@ export const useSignUp = () => {
             values: {
                 fullName: '',
                 email: '',
+                phoneNumber:'',
                 password: '',
                 confirmPassword: ''
             },

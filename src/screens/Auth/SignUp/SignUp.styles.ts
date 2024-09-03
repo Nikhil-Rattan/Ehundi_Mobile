@@ -1,7 +1,7 @@
 
 import { Platform, StyleSheet } from "react-native";
 import { COLORS } from "../../../theme/colors";
-import { verticalScale } from "../../../theme/responsiveSize";
+import { moderateScale, verticalScale } from "../../../theme/responsiveSize";
 import commonStyles from "../../../theme/commonStyles";
 
 export const styles = StyleSheet.create({
@@ -51,4 +51,51 @@ export const styles = StyleSheet.create({
         width:'100%',
         textAlign:'center',
     },
+    inputContainer:{
+        marginTop:verticalScale(22),
+    },
+    labelTxtStyle: {
+        ...commonStyles.regular16,
+        textAlign:'center',
+        marginBottom:verticalScale(10)
+    },
+    inputContainerView: {
+        flexDirection:'row',
+        justifyContent: 'center',
+        borderWidth: verticalScale(1),
+        borderColor: COLORS.LIGHT_ORANGE,
+        borderRadius: moderateScale(10),
+        width:'100%',
+    },
+    customPlaceholder: {
+        position: 'absolute',
+        top: 0,
+        right:0,
+        bottom:0,
+        left: verticalScale(10),
+        paddingVertical: verticalScale(20),
+        paddingHorizontal: verticalScale(10),
+        ...commonStyles.light14
+      },
+      inputStyle: {
+        marginVertical: verticalScale(18),
+        paddingHorizontal: verticalScale(10),
+        ...commonStyles.regular16,
+        borderLeftWidth:moderateScale(1.5),
+        borderLeftColor:COLORS.OFF_WHITE
+    },
+    errorStyle: {
+        ...commonStyles.regular12,
+        color: COLORS.ERROR_RED,
+        marginTop: verticalScale(4),
+        marginLeft: verticalScale(4),
+    },
+    countryCodeContainer:{
+        flex:1.5,
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    inputFlex:{
+        flex:8.5
+    }
 });

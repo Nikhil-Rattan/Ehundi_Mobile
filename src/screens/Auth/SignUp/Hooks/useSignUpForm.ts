@@ -26,6 +26,9 @@ const useSignUpForm = ({ initialValues, onSubmit }: UseFormProps) => {
                 .required(`Email ${strings.error.isRequired}`)
                 .trim()
                 .email(strings.error.invalid_email),
+            phoneNumber: Yup.string()
+                .required(`Phone number ${strings.error.isRequired}`)
+                .min(10, strings.error.phoneNumberLength),
             password: Yup.string()
                 .required(`Password ${strings.error.isRequired}`)
                 .trim()

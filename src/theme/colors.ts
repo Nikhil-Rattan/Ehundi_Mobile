@@ -7,4 +7,5 @@ export const COLORS = {
   ECLIPSE:'#3C3C3C',
   ERROR_RED: "#FC4040",
   CHARCOAL_OPACITY_20: 'rgba(51, 51, 51, 0.4)',
+  OFF_WHITE:"#F3F3F3"
 };

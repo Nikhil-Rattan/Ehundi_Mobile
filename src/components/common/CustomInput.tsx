@@ -3,6 +3,7 @@ import { Image, View, TouchableOpacity, TextInput, TextInputProps, ViewStyle, Te
 import styles from './CustomInput.styles';
 import commonStyles, { hitSlopProp } from '../../theme/commonStyles';
 import { IMAGES } from '../../assets';
+import { COLORS } from '../../theme/colors';
 
 /**
 Type Safety: Interfaces help provide type safety in your code. TypeScript will check that objects you pass
@@ -45,7 +46,7 @@ const CustomInput: React.FC<MyComponentProps> = props => {
         editable = true,
         secureTextEntry,
         txtInputStyle,
-        cursorColor,
+        cursorColor = COLORS.PRIMARY_ORANGE,
         keyboardType,
         multiline = false,
         maxLength,
