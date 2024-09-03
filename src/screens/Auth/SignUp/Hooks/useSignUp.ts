@@ -1,20 +1,21 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { StackParamList } from "../../../../navigation/types";
 import { useNavigation } from "@react-navigation/native";
-import useLoginForm from "./useLoginForm";
-import { LoginFormValues } from "../../../../types";
+import useSignUpForm from "./useSignUpForm";
+import { SignUpFormValues } from "../../../../types";
 import { useState } from "react";
 import { removeEmojis } from "../../../../utlis/validations";
-import { Keyboard } from "react-native";
 
 
-export const useLogin = () => {
+export const useSignUp = () => {
     const navigation = useNavigation<NativeStackNavigationProp<StackParamList>>();
     const [loading, setLoading] = useState(false)
-    const { formik, setFieldValue } = useLoginForm({
+    const { formik, setFieldValue } = useSignUpForm({
         initialValues: {
+            fullName: '',
             email: '',
             password: '',
+            confirmPassword: ''
         },
         onSubmit: (values) => {
             onSubmitButtonPress(values)
@@ -23,33 +24,35 @@ export const useLogin = () => {
     const resetValues = () => {
         formik.resetForm({
             values: {
+                fullName: '',
                 email: '',
                 password: '',
+                confirmPassword: ''
             },
             errors: {},
         });
     }
-    const onSignUpPress = () => {
+    const onLoginPress = () => {
         resetValues()
-        navigation.navigate('SignUp')
+        navigation.goBack()
     };
-    const onSubmitButtonPress = async (_values: LoginFormValues) => {
-        Keyboard.dismiss()
+    const onSubmitButtonPress = async (_values: SignUpFormValues) => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
             navigation.navigate('TwoFactoAuth')
         }, 800);
+
     }
-    const handleInputChange = (field: keyof LoginFormValues, value: string) => {
+    const handleInputChange = (field: keyof SignUpFormValues, value: string) => {
         const sanitizedValue = removeEmojis(value);
         setFieldValue(field, sanitizedValue);
-      };
+    };
 
     return {
         formik,
         setFieldValue,
-        onSignUpPress,
+        onLoginPress,
         handleInputChange,
         loading
     };

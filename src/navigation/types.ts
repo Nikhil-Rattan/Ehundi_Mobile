@@ -7,9 +7,7 @@ export type AuthStackParamList = {
     Home: undefined | object;
     SignUp: undefined | object;
     ForgotPassword: undefined | object;
-    TwoFactoAuth: {
-        // isFromLogin: boolean;
-    };
+    TwoFactoAuth: undefined | object;
 };
 
 // Home Stack Parameters

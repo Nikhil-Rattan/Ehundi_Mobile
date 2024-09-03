@@ -1,5 +1,5 @@
 
-import { Platform, StyleSheet } from "react-native";
+import {Platform,StyleSheet } from "react-native";
 import { COLORS } from "../../../theme/colors";
 import { verticalScale } from "../../../theme/responsiveSize";
 import commonStyles from "../../../theme/commonStyles";
@@ -40,11 +40,11 @@ export const styles = StyleSheet.create({
     copyRightTxtStyle: {
         ...commonStyles.semiBold10,
         letterSpacing: verticalScale(2),
+        paddingVertical:verticalScale(4),
         position: 'absolute',
-        bottom: 2,
-        alignSelf: 'center'
+        bottom:0,
+        backgroundColor:COLORS.PRIMARY_WHITE,
+        width:'100%',
+        textAlign:'center',
     },
-    loader: {
-        backgroundColor: COLORS.PRIMARY_WHITE,
-    }
 });

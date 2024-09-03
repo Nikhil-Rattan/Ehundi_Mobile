@@ -32,7 +32,7 @@ const useLoginForm = ({ initialValues, onSubmit }: UseFormProps) => {
     validateOnChange: false,
   });
 
-  const debounceTimeout = useRef<NodeJS.Timeout | null>(null);
+  const debounceTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const setFieldValue = (field: keyof LoginFormValues, value: string) => {
     formik.setFieldValue(field, value);
@@ -42,7 +42,7 @@ const useLoginForm = ({ initialValues, onSubmit }: UseFormProps) => {
     }
 
     debounceTimeout.current = setTimeout(() => {
-      formik.validateField(field); 
+      formik.validateField(field);
     }, 500);
   };
 

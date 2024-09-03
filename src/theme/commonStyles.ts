@@ -11,16 +11,19 @@ interface Style {
     centerAlignedRow: ViewStyle;
     rowSpaceBetween: ViewStyle;
     rowSpaceEvenly: ViewStyle;
+    loaderStyle:ViewStyle;
     redressedRegular37: TextStyle;
     semiBold16: TextStyle;
     semiBold10: TextStyle;
     medium16: TextStyle;
+    medium14: TextStyle;
     medium10: TextStyle;
     regular16: TextStyle;
     regular12: TextStyle;
     light14: TextStyle;
     logoIconStyle: ImageStyle;
     passwordIconStyle: ImageStyle;
+    icon20:ImageStyle;
 }
 
 export const hitSlopProp = {
@@ -81,6 +84,11 @@ export default StyleSheet.create<Style>({
         color: COLORS.PRIMARY_WHITE,
         fontFamily: FONTS.medium,
     },
+    medium14: {
+        fontSize: moderateScale(14),
+        color: COLORS.PRIMARY_ORANGE,
+        fontFamily: FONTS.medium,
+    },
     medium10: {
         fontSize: moderateScale(10),
         color: COLORS.BLACK,
@@ -110,7 +118,14 @@ export default StyleSheet.create<Style>({
         height: scale(13),
         width: scale(19),
         resizeMode: ImageEnum.contain
-
     },
+    loaderStyle:{
+        backgroundColor: COLORS.PRIMARY_WHITE,
+    },
+    icon20:{
+        width:scale(20),
+        height:scale(20),
+        resizeMode:ImageEnum.contain
+    }
 
 });

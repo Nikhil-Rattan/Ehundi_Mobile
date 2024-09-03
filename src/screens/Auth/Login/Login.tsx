@@ -1,4 +1,4 @@
-import { View, Text, StatusBar, ImageBackground, Image, Platform, TouchableOpacity } from 'react-native';
+import { View, Text, StatusBar, ImageBackground, Image, Platform, TouchableOpacity, SafeAreaView } from 'react-native';
 import React from 'react';
 import { COLORS } from '../../../theme/colors';
 import commonStyles from '../../../theme/commonStyles';
@@ -10,7 +10,12 @@ import { useLogin } from './Hooks/useLogin';
 import strings from '../../../localization';
 
 const Login = () => {
-  const { formik, handleInputChange, loading } = useLogin();
+  const {
+    formik,
+    handleInputChange,
+    loading,
+    onSignUpPress
+  } = useLogin();
 
   return (
     <View style={commonStyles.container}>
@@ -44,7 +49,7 @@ const Login = () => {
             <CustomInput
               label={strings.login.email}
               value={formik.values.email}
-              placeholder={strings.login.emailPlaceHolder}
+              placeholder={strings.placeHolder.emailPlaceHolder}
               onChangeText={(value: string) => handleInputChange('email', value)}
               keyboardType='email-address'
               errorMessage={formik.errors.email ? formik.errors.email : ""}
@@ -52,7 +57,7 @@ const Login = () => {
             <CustomInput
               label={strings.login.password}
               value={formik.values.password}
-              placeholder={strings.login.passwordPlaceHolder}
+              placeholder={strings.placeHolder.passwordPlaceHolder}
               secureTextEntry={true}
               errorMessage={formik.errors.password ? formik.errors.password : ""}
               onChangeText={(value: string) => handleInputChange('password', value)}
@@ -64,18 +69,21 @@ const Login = () => {
             <TouchableOpacity
               activeOpacity={0.7}
               style={styles.signUpContainer}
+              onPress={onSignUpPress}
             >
               <Text style={styles.signUpTxt}>{strings.login.dontHaveAccount}</Text>
               <Text style={[styles.signUpTxt, styles.activeTxt]}>{strings.login.signUp}</Text>
             </TouchableOpacity>
-            <Text style={styles.copyRightTxtStyle}>{strings.common.copyRightTxt}</Text>
           </KeyboardAwareScrollView>
+          <SafeAreaView>
+            <Text style={styles.copyRightTxtStyle}>{strings.common.copyRightTxt}</Text>
+          </SafeAreaView>
         </View>
-      
+
       </ImageBackground>
-      {loading && <View style={[styles.loader]}>
-          <Loader loading={loading ? loading : false} />
-        </View>}
+      {loading && <View style={[commonStyles.loaderStyle]}>
+        <Loader loading={loading ? loading : false} />
+      </View>}
 
     </View>
   );
