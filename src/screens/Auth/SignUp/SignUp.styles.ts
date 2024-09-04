@@ -78,11 +78,11 @@ export const styles = StyleSheet.create({
         ...commonStyles.light14
       },
       inputStyle: {
-        marginVertical: verticalScale(18),
+        paddingVertical: verticalScale(18),
         paddingHorizontal: verticalScale(10),
         ...commonStyles.regular16,
         borderLeftWidth:moderateScale(1.5),
-        borderLeftColor:COLORS.OFF_WHITE
+        borderLeftColor:COLORS.OFF_WHITE,
     },
     errorStyle: {
         ...commonStyles.regular12,

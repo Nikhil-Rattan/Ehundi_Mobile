@@ -28,4 +28,13 @@ const showWarning = (message: string): void => {
   });
 };
 
-export { showError, showSuccess, showInfo, showWarning };
+const  formatPhoneNumber = (phoneNumber: string) => {
+  const phoneNumberStr = phoneNumber.toString();
+
+  const firstPart = phoneNumberStr.slice(0, 5);
+  const secondPart = phoneNumberStr.slice(5);
+
+  return `${firstPart} ${secondPart}`;
+}
+
+export { showError, showSuccess, showInfo, showWarning, formatPhoneNumber };

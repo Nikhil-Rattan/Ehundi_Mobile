@@ -11,19 +11,21 @@ interface Style {
     centerAlignedRow: ViewStyle;
     rowSpaceBetween: ViewStyle;
     rowSpaceEvenly: ViewStyle;
-    loaderStyle:ViewStyle;
+    loaderStyle: ViewStyle;
     redressedRegular37: TextStyle;
     semiBold16: TextStyle;
     semiBold10: TextStyle;
     medium16: TextStyle;
     medium14: TextStyle;
+    medium12: TextStyle;
     medium10: TextStyle;
     regular16: TextStyle;
     regular12: TextStyle;
     light14: TextStyle;
     logoIconStyle: ImageStyle;
     passwordIconStyle: ImageStyle;
-    icon20:ImageStyle;
+    icon20: ImageStyle;
+    icon56: ImageStyle;
 }
 
 export const hitSlopProp = {
@@ -74,7 +76,7 @@ export default StyleSheet.create<Style>({
         color: COLORS.BLACK,
         fontFamily: FONTS.semiBold,
     },
-    semiBold10:{
+    semiBold10: {
         fontSize: moderateScale(10),
         color: COLORS.PRIMARY_ORANGE,
         fontFamily: FONTS.semiBold,
@@ -87,6 +89,11 @@ export default StyleSheet.create<Style>({
     medium14: {
         fontSize: moderateScale(14),
         color: COLORS.PRIMARY_ORANGE,
+        fontFamily: FONTS.medium,
+    },
+    medium12: {
+        fontSize: moderateScale(12),
+        color: COLORS.DARK_GRAY,
         fontFamily: FONTS.medium,
     },
     medium10: {
@@ -119,13 +126,18 @@ export default StyleSheet.create<Style>({
         width: scale(19),
         resizeMode: ImageEnum.contain
     },
-    loaderStyle:{
+    loaderStyle: {
         backgroundColor: COLORS.PRIMARY_WHITE,
     },
-    icon20:{
-        width:scale(20),
-        height:scale(20),
-        resizeMode:ImageEnum.contain
+    icon20: {
+        width: scale(20),
+        height: scale(20),
+        resizeMode: ImageEnum.contain
+    },
+    icon56: {
+        width: scale(56),
+        height: scale(56),
+        resizeMode: ImageEnum.contain
     }
 
 });

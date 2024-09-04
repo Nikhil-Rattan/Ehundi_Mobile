@@ -39,13 +39,13 @@ export const useLogin = () => {
         setTimeout(() => {
             setLoading(false)
             resetValues()
-            navigation.navigate('TwoFactoAuth')
+            navigation.navigate('Home')
         }, 800);
     }
     const handleInputChange = (field: keyof LoginFormValues, value: string) => {
         const sanitizedValue = removeEmojis(value);
         setFieldValue(field, sanitizedValue);
-      };
+    };
 
     return {
         formik,

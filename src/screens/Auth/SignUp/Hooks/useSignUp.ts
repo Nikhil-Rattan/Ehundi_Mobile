@@ -16,7 +16,7 @@ export const useSignUp = () => {
         initialValues: {
             fullName: '',
             email: '',
-            phoneNumber:'',
+            phoneNumber: '',
             password: '',
             confirmPassword: ''
         },
@@ -29,7 +29,7 @@ export const useSignUp = () => {
             values: {
                 fullName: '',
                 email: '',
-                phoneNumber:'',
+                phoneNumber: '',
                 password: '',
                 confirmPassword: ''
             },
@@ -40,13 +40,13 @@ export const useSignUp = () => {
         resetValues()
         navigation.goBack()
     };
-    const onSubmitButtonPress = async (_values: SignUpFormValues) => {
+    const onSubmitButtonPress = async (values: SignUpFormValues) => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
             resetValues()
             showSuccess(strings.signUp.otpSent)
-            navigation.navigate('TwoFactoAuth')
+            navigation.navigate('TwoFactoAuth', { data: values })
         }, 800);
 
     }

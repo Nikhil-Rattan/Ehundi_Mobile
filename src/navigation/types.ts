@@ -1,3 +1,4 @@
+import { SignUpFormValues } from "src/types";
 
 export const NAVIGATION = {} as const;
 
@@ -7,7 +8,9 @@ export type AuthStackParamList = {
     Home: undefined | object;
     SignUp: undefined | object;
     ForgotPassword: undefined | object;
-    TwoFactoAuth: undefined | object;
+    TwoFactoAuth: {
+        data: SignUpFormValues
+    };
 };
 
 // Home Stack Parameters

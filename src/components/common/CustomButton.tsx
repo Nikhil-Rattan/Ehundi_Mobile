@@ -3,6 +3,7 @@ import { StyleProp, ViewStyle, TextStyle, TouchableOpacity, Text } from 'react-n
 
 import styles from './CustomButton.styles';
 import commonStyles from '../../theme/commonStyles';
+import { COLORS } from '../../theme/colors';
 
 
 interface CustomButtonProps {
@@ -11,22 +12,24 @@ interface CustomButtonProps {
     customizeBtnStyle?: StyleProp<ViewStyle>;
     btnTitleStyle?: StyleProp<TextStyle>;
     isdisable?: boolean;
+    btnTxtStyle?: StyleProp<TextStyle>
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
     title,
     onPress,
     customizeBtnStyle,
+    btnTxtStyle,
     isdisable = false,
 
 }) => {
     return (
         <TouchableOpacity
-            style={[styles.btnStyle, customizeBtnStyle]}
+            style={[styles.btnStyle, customizeBtnStyle, { backgroundColor: isdisable ? COLORS.OFF_WHITE : COLORS.PRIMARY_ORANGE }]}
             onPress={onPress}
             disabled={isdisable}
             activeOpacity={0.8}>
-            <Text style={commonStyles.medium16}>{title}</Text>
+            <Text style={[commonStyles.medium16, btnTxtStyle, { color: isdisable ? COLORS.DARK_GRAY : COLORS.OFF_WHITE }]}>{title}</Text>
         </TouchableOpacity>
     );
 };

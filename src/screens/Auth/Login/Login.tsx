@@ -52,6 +52,7 @@ const Login = () => {
               placeholder={strings.placeHolder.emailPlaceHolder}
               onChangeText={(value: string) => handleInputChange('email', value)}
               keyboardType='email-address'
+              autoCapitalize='none'
               errorMessage={formik.errors.email ? formik.errors.email : ""}
             />
             <CustomInput
