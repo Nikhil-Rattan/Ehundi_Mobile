@@ -57,7 +57,7 @@ const TwoFactor = ({ route }: OTPRouteProps) => {
             <CustomButton
               title={`${strings.otp.resendOtp} ${timer == '01:00' ? '' : `${strings.otp.in} ${timer}`}`}
               onPress={resendOtpPress}
-              btnTxtStyle={{ ...commonStyles.medium12 }}
+              btnTxtStyle={styles.resendTxt}
               isdisable={isResendButtonDisable}
               customizeBtnStyle={styles.resendBtnStyle}
             />

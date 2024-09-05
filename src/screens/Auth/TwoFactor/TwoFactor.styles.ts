@@ -45,6 +45,10 @@ export const styles = StyleSheet.create({
         paddingVertical: verticalScale(12),
         paddingHorizontal:verticalScale(8),
         width: '40%', alignSelf: 'center'
+    },
+    resendTxt:{
+        ...commonStyles.medium12, 
+        textAlign:'center'
     }
 
 });
