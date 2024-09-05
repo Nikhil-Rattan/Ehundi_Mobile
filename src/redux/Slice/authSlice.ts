@@ -18,6 +18,7 @@ const authSlice = createSlice({
     reducers: {
         saveUserData: (state, action: PayloadAction<object>) => {
             setItem("userData", action.payload);
+            console.log('userData :>> ', action.payload);
             state.userData = action.payload;
         },
         setNotificationToken: (state, action: PayloadAction<string>) => {

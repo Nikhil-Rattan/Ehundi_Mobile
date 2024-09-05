@@ -8,12 +8,13 @@ export const IMAGES = {
     subhadraVigrahaSeva: require("./images/Home/jaganNath.jpg"),
     vrindavanchandraVigrahaSeva: require("./images/Home/radhaKrishna.jpeg"),
     vigrahaSeva: require("./images/Home/krishna.jpg"),
+    dummyUserImg: require("./images/Home/dummyUser.png"),
 
 
     // Icons
     backIcon: require("./icons/back.png"),
-    openEyeIcon:require("./icons/openEye.png"),
-    closeEyeIcon:require("./icons/closeEye.png"),
+    openEyeIcon: require("./icons/openEye.png"),
+    closeEyeIcon: require("./icons/closeEye.png"),
     crossIcon: require("./icons/cross.png")
 
 };

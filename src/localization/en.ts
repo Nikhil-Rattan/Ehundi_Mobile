@@ -29,6 +29,14 @@ export const en = {
         next: 'Next >',
         otpSentSuccess: 'OTP has been sent successfully!'
     },
+    home:{
+        annaDan:"Donate for Anna Daan",
+        gauDan:"Daily Gau Mata Seva",
+        balajiSeva:"Sri Balaji Vigraha Seva",
+        jaganNathSeva:"Sri Sri Jagannath Baladev Subhadra Vigraha Seva",
+        radheShyamSeve:"Sri Sri Radha Vrindavanchandra Vigraha Seva",
+        sadhuBhojan:"Sadhu Bhojan"
+    },
     error: {
         isRequired: "is required.",
         invalid_email: "Please enter a valid email",

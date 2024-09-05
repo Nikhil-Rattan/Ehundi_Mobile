@@ -6,6 +6,7 @@ import { FONTS } from './fonts';
 
 interface Style {
     container: ViewStyle;
+    mainContainer:ViewStyle;
     fill: ImageStyle;
     centerAlignedView: ViewStyle;
     centerAlignedRow: ViewStyle;
@@ -26,6 +27,7 @@ interface Style {
     passwordIconStyle: ImageStyle;
     icon20: ImageStyle;
     icon56: ImageStyle;
+    icon45: ImageStyle;
 }
 
 export const hitSlopProp = {
@@ -138,6 +140,11 @@ export default StyleSheet.create<Style>({
         width: scale(56),
         height: scale(56),
         resizeMode: ImageEnum.contain
+    },
+    icon45: {
+        height: scale(45),
+        width: scale(45),
+        resizeMode: ImageEnum.contain,
     }
 
 });
