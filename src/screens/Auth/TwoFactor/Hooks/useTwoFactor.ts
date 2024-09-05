@@ -7,6 +7,8 @@ import { StackParamList } from "../../../../navigation/types";
 import { showError, showSuccess } from "../../../../utlis/helperFunctions";
 import strings from "../../../../localization";
 import { SignUpFormValues } from '../../../../types'
+import { saveUserData } from "../../../..//redux/Slice/authSlice";
+import { useDispatch } from "react-redux";
 
 export const useTwoFactor = (params: SignUpFormValues) => {
     const navigation = useNavigation<NativeStackNavigationProp<StackParamList>>();
@@ -17,14 +19,15 @@ export const useTwoFactor = (params: SignUpFormValues) => {
     const input = useRef<OTPTextView>(null);
     const [timer, setTimer] = useState<number>(60);
     const userDetail = params ?? {};
+    const dispatch = useDispatch();
 
     const formatTime = (seconds: number) => {
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
-      
+
         const minutesStr = String(minutes).padStart(2, '0');
         const secondsStr = String(remainingSeconds).padStart(2, '0');
-      
+
         return `${minutesStr}:${secondsStr}`;
     };
 
@@ -58,14 +61,14 @@ export const useTwoFactor = (params: SignUpFormValues) => {
     }, [isResendButtonDisable]);
 
     const verifyOTP = async () => {
+        const { confirmPassword, ...res } = userDetail
         Keyboard.dismiss();
-        if(otpInput == '1234'){
-
+        if (otpInput == '1234') {
+            dispatch(saveUserData({ ...res, access_token: '1234' }))
         }
-        else{
+        else {
             showError(strings.error.matchOtpError)
         }
-        console.log(otpInput);
     };
 
     const resendOtpPress = async () => {
@@ -76,7 +79,7 @@ export const useTwoFactor = (params: SignUpFormValues) => {
             setIsResendButtonDisable(true);
             showSuccess(strings.otp.otpSentSuccess);
         }, 800);
-      
+
     };
 
     const onBackPress = () => {

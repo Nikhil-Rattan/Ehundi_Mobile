@@ -7,9 +7,11 @@ import FlashMessage from 'react-native-flash-message';
 import { StatusBar, StyleSheet } from 'react-native';
 import { moderateScaleVertical, textScale } from './src/theme/responsiveSize';
 import { positionEnum } from './src/config/Enum';
+import checkLocalStorage from './src/helper/handleLocalStorage';
 
 const App = () => {
   useEffect(() => {
+    checkLocalStorage();
     setTimeout(() => {
       SplashScreen.hide();
     }, 800);
