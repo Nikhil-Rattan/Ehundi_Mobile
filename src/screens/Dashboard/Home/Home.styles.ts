@@ -28,11 +28,6 @@ export const styles = StyleSheet.create({
         paddingTop:verticalScale(10),
         paddingBottom:verticalScale(1)
     },
-    image: {
-        width: verticalScale(120),
-        height: verticalScale(120),
-        resizeMode: 'contain',
-    },
     itemText: {
         ...commonStyles.medium14,
         color:COLORS.PRIMARY_WHITE,
@@ -46,6 +41,7 @@ export const styles = StyleSheet.create({
         marginTop:verticalScale(4),
         paddingVertical:verticalScale(4),
         borderRadius:verticalScale(15),
+        paddingHorizontal:verticalScale(4)
 
     },
     logoTxtStyle: {

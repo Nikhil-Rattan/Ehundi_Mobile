@@ -18,8 +18,8 @@ const Home = () => {
   const renderItem = ({ item }: { item: { name: string, image: any } }) => (
     <TouchableOpacity
       style={styles.itemContainer}
-      activeOpacity={0.96}>
-      <Image source={item.image} style={styles.image} />
+      activeOpacity={0.95}>
+      <Image source={item.image} style={commonStyles.icon120} />
       <View style={styles.itemBtnStyle}>
         <Text style={styles.itemText}>{item.name}</Text>
       </View>
