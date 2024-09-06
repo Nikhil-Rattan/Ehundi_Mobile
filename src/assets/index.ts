@@ -2,12 +2,12 @@ export const IMAGES = {
     // Images
     bgImg: require("./images/Auth/bgImg.png"),
     logo: require("./images/Auth/logo.png"),
-    aanDaan: require("./images/Home/aandann.jpg"),
-    gauDaan: require("./images/Home/gaudan.jpg"),
-    saadhuBhojan: require("./images/Home/sadhu.jpeg"),
-    subhadraVigrahaSeva: require("./images/Home/jaganNath.jpg"),
-    vrindavanchandraVigrahaSeva: require("./images/Home/radhaKrishna.jpeg"),
-    vigrahaSeva: require("./images/Home/krishna.jpg"),
+    aanDaan: require("./images/Home/aandann.png"),
+    gauDaan: require("./images/Home/gaudan.png"),
+    saadhuBhojan: require("./images/Home/sadhu.png"),
+    subhadraVigrahaSeva: require("./images/Home/jaganNath.png"),
+    vrindavanchandraVigrahaSeva: require("./images/Home/radhaKrishna.png"),
+    vigrahaSeva: require("./images/Home/krishna.png"),
     dummyUserImg: require("./images/Home/dummyUser.png"),
 
 

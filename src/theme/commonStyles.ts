@@ -14,6 +14,7 @@ interface Style {
     rowSpaceEvenly: ViewStyle;
     loaderStyle: ViewStyle;
     redressedRegular37: TextStyle;
+    semiBold24: TextStyle;
     semiBold16: TextStyle;
     semiBold10: TextStyle;
     medium16: TextStyle;
@@ -78,6 +79,11 @@ export default StyleSheet.create<Style>({
     semiBold16: {
         fontSize: moderateScale(16),
         color: COLORS.BLACK,
+        fontFamily: FONTS.semiBold,
+    },
+    semiBold24: {
+        fontSize: moderateScale(24),
+        color: COLORS.PRIMARY_WHITE,
         fontFamily: FONTS.semiBold,
     },
     semiBold10: {

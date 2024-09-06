@@ -34,12 +34,13 @@ export const en = {
         otpSentSuccess: 'OTP has been sent successfully!'
     },
     home:{
-        annaDan:"Donate for Anna Daan",
-        gauDan:"Daily Gau Mata Seva",
-        balajiSeva:"Sri Balaji Vigraha Seva",
-        jaganNathSeva:"Sri Sri Jagannath Baladev Subhadra Vigraha Seva",
-        radheShyamSeve:"Sri Sri Radha Vrindavanchandra Vigraha Seva",
-        sadhuBhojan:"Sadhu Bhojan"
+        donations:"DONATIONS",
+        annaDan:"General Donation",
+        gauDan:"Pooja Donation",
+        balajiSeva:"Corpus Donation",
+        jaganNathSeva:"Education Donation",
+        radheShyamSeve:"Annadhanam",
+        sadhuBhojan:"Temple Maintenance"
     },
     error: {
         isRequired: "is required.",

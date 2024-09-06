@@ -8,7 +8,7 @@ import { homeDataProps } from "src/types/Home";
 
 export const useHome = () => {
     const navigation = useNavigation<NativeStackNavigationProp<StackParamList>>();
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [homeData, _setHomeData] = useState<homeDataProps[]>([
         {
             name: strings.home.annaDan,

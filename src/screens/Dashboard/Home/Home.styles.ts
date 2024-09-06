@@ -1,39 +1,80 @@
 
-import {  StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import { COLORS } from "../../../theme/colors";
 import { moderateScale, verticalScale } from "../../../theme/responsiveSize";
 import commonStyles from "../../../theme/commonStyles";
 
 export const styles = StyleSheet.create({
-    headerContainer:{
+    headerContainer: {
         ...commonStyles.rowSpaceBetween,
-        padding:verticalScale(15),
-    
-        backgroundColor:COLORS.LIGHT_ORANGE
+        padding: verticalScale(15),
     },
-    userImgContainer:{
+    userImgContainer: {
         ...commonStyles.icon45,
-        borderRadius:moderateScale(25),
+        borderRadius: moderateScale(25),
     },
     flatListContainer: {
-        paddingHorizontal: 10,
-        paddingTop: 10,
+        paddingHorizontal: verticalScale(10),
+        paddingBottom: verticalScale(40),
     },
     itemContainer: {
-        flex: 1,
-        margin: 10,
-        alignItems: 'center', // Center the image and text horizontally
+        flex: 0.555,
+        marginVertical:verticalScale(10),
+        marginHorizontal:verticalScale(6),
+        alignItems:'center',
+        backgroundColor: COLORS.PRIMARY_WHITE,
+        borderRadius:verticalScale(15),
+        paddingHorizontal:verticalScale(15),
+        paddingTop:verticalScale(10),
+        paddingBottom:verticalScale(1)
     },
     image: {
-        width: 150,
-        height: 150,
+        width: verticalScale(120),
+        height: verticalScale(120),
         resizeMode: 'contain',
-        marginBottom: 10, // Space between image and text
     },
     itemText: {
-        fontSize: 16,
-        textAlign: 'center',
+        ...commonStyles.medium14,
+        color:COLORS.PRIMARY_WHITE,
+        textAlign:'center'
     },
-   
+    itemBtnStyle:{
+        backgroundColor:COLORS.MUSTARD,
+        width:'110%',
+        alignItems:'center',
+        justifyContent:'center',
+        marginTop:verticalScale(4),
+        paddingVertical:verticalScale(4),
+        borderRadius:verticalScale(15),
+
+    },
+    logoTxtStyle: {
+        ...commonStyles.redressedRegular37,
+        color: COLORS.PRIMARY_WHITE
+    },
+    listContainer: {
+        flex: 1,
+        marginTop: verticalScale(15)
+
+    },
+    donationTxtStyle: {
+        ...commonStyles.semiBold24,
+        textAlign: 'center',
+        marginBottom: verticalScale(10)
+
+    },
+    copyRightTxtStyle: {
+        ...commonStyles.semiBold10,
+        letterSpacing: verticalScale(2),
+        paddingTop: verticalScale(4),
+        paddingBottom: verticalScale(Platform.OS == 'ios' ? 0 : 4),
+        position: 'absolute',
+        bottom: 0,
+        color: COLORS.PRIMARY_WHITE,
+        backgroundColor: COLORS.SECONDARY_ORANGE,
+        width: '100%',
+        textAlign: 'center',
+    }
+
 
 });
