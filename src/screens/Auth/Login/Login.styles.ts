@@ -6,7 +6,7 @@ import commonStyles from "../../../theme/commonStyles";
 
 export const styles = StyleSheet.create({
     upperContainer: {
-        flex: 2,
+        flex: 1.9,
     },
     lowerContainer: {
         flex: 9,

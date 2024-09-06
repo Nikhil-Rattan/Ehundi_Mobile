@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
     inputStyle: {
         flex:9.8,
-        paddingVertical: verticalScale(Platform.OS == 'ios' ? 18 : 14),
+        paddingVertical: scale(Platform.OS == 'ios' ? 18 : 16),
         paddingHorizontal: verticalScale(10),
         ...commonStyles.regular16,
     },
