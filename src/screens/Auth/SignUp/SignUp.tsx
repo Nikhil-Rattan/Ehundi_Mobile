@@ -14,7 +14,8 @@ const Login = () => {
     formik,
     handleInputChange,
     loading,
-    onLoginPress
+    onLoginPress,
+    onImgPickerPress,
   } = useSignUp();
 
   return (
@@ -35,7 +36,6 @@ const Login = () => {
           <KeyboardAwareScrollView
             bounces={false}
             keyboardShouldPersistTaps='handled'
-            extraHeight={-250}
             enableAutomaticScroll
             showsVerticalScrollIndicator={false}
             style={styles.scrollContainer}
@@ -51,6 +51,29 @@ const Login = () => {
                 <Image source={IMAGES.crossIcon} style={commonStyles.icon20} />
               </TouchableOpacity>
             </View>
+            <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={onImgPickerPress}
+              style={styles.imgContainer}>
+              {formik.values.profileImg ? (
+                <>
+                <Image
+                  source={{ uri: formik.values.profileImg }}
+                  style={[styles.imgStyle, styles.borderStyle]}
+                />
+                <Image 
+                source={IMAGES.cameraIcon}
+                style={styles.cameraIconStyle}/>
+                </>
+              ) :
+
+                <Image
+                  source={IMAGES.profileImgPlaceHolder}
+                  style={styles.imgStyle}
+                />
+              }
+
+            </TouchableOpacity>
             <CustomInput
               label={strings.signUp.fullname}
               value={formik.values.fullName}

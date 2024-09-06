@@ -4,4 +4,5 @@ export interface SignUpFormValues {
     phoneNumber:string;
     password:string;
     confirmPassword: string;
+    profileImg:string;
 }

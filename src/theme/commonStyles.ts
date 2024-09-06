@@ -28,6 +28,8 @@ interface Style {
     icon20: ImageStyle;
     icon56: ImageStyle;
     icon45: ImageStyle;
+    icon78:ImageStyle;
+    icon25:ImageStyle;
 }
 
 export const hitSlopProp = {
@@ -145,6 +147,16 @@ export default StyleSheet.create<Style>({
         height: scale(45),
         width: scale(45),
         resizeMode: ImageEnum.contain,
+    },
+    icon78:{
+        height: scale(78),
+        width: scale(78),
+        resizeMode: ImageEnum.contain
+    },
+    icon25:{
+        height: scale(25),
+        width: scale(25),
+        resizeMode: ImageEnum.contain
     }
 
 });

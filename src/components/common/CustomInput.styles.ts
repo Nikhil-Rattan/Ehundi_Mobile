@@ -1,5 +1,5 @@
 
-import {  StyleSheet } from "react-native";
+import {  Platform, StyleSheet } from "react-native";
 import commonStyles from "../../theme/commonStyles";
 import { verticalScale, moderateScale, scale } from "../../theme/responsiveSize";
 import { COLORS } from "../../theme/colors";
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
     inputStyle: {
         flex:9.8,
-        paddingVertical: verticalScale(18),
+        paddingVertical: verticalScale(Platform.OS == 'ios' ? 18 : 14),
         paddingHorizontal: verticalScale(10),
         ...commonStyles.regular16,
     },

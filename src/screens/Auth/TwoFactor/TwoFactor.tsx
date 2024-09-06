@@ -9,7 +9,6 @@ import { useTwoFactor } from './Hooks/useTwoFactor';
 import OTPTextView from 'react-native-otp-textinput';
 import { COLORS } from '../../../theme/colors';
 import { CustomButton, Loader } from '../../../components';
-import { formatPhoneNumber } from '../../../utlis/helperFunctions';
 
 const TwoFactor = ({ route }: OTPRouteProps) => {
   const {
@@ -43,7 +42,7 @@ const TwoFactor = ({ route }: OTPRouteProps) => {
 
           <View style={styles.sideContainer}>
             <Text style={[styles.headingTxt, styles.grayColor]}>{strings.otp.verificationCode}</Text>
-            <Text style={styles.headingTxt}>{`${strings.placeHolder.countryCodePlaceHolder} ${formatPhoneNumber(userDetail?.phoneNumber ?? '')}`}</Text>
+            <Text style={styles.headingTxt}>{`${userDetail?.email ?? ''}`}</Text>
             <OTPTextView
               ref={input}
               containerStyle={styles.otpInputContainer}

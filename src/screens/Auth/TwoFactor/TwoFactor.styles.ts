@@ -44,7 +44,7 @@ export const styles = StyleSheet.create({
     resendBtnStyle:{
         paddingVertical: verticalScale(12),
         paddingHorizontal:verticalScale(8),
-        width: '40%', alignSelf: 'center'
+        width: '42%', alignSelf: 'center'
     },
     resendTxt:{
         ...commonStyles.medium12, 

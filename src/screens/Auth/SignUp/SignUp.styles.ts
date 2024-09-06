@@ -3,13 +3,14 @@ import { Platform, StyleSheet } from "react-native";
 import { COLORS } from "../../../theme/colors";
 import { moderateScale, verticalScale } from "../../../theme/responsiveSize";
 import commonStyles from "../../../theme/commonStyles";
+import { ImageEnum } from "../../../config/Enum";
 
 export const styles = StyleSheet.create({
     upperContainer: {
-        flex: 1.2,
+        flex: 0.09,
     },
     lowerContainer: {
-        flex: 9.8,
+        flex: 0.999,
         backgroundColor: COLORS.PRIMARY_WHITE,
         borderTopLeftRadius: verticalScale(34),
         borderTopRightRadius: verticalScale(34),
@@ -97,5 +98,25 @@ export const styles = StyleSheet.create({
     },
     inputFlex:{
         flex:8.5
+    },
+    imgContainer:{
+        marginTop:verticalScale(15),
+        marginBottom:verticalScale(-10)
+    },
+    imgStyle:{
+        ...commonStyles.icon78,
+        alignSelf:'center',
+    },
+    cameraIconStyle:{
+        ...commonStyles.icon25,
+        position:'relative', 
+        bottom:20, 
+        right:-32, 
+        alignSelf:'center'
+    },
+    borderStyle:{
+        borderRadius:verticalScale(15),
+        resizeMode:ImageEnum.cover
     }
+
 });

@@ -7,6 +7,8 @@ import { useState } from "react";
 import { removeEmojis } from "../../../../utlis/validations";
 import { showSuccess } from "../../../../utlis/helperFunctions";
 import strings from "../../../../localization";
+import { Keyboard } from "react-native";
+import { requestCameraPermission, selectSingleImage } from "../../../../utlis/permission";
 
 
 export const useSignUp = () => {
@@ -18,7 +20,8 @@ export const useSignUp = () => {
             email: '',
             phoneNumber: '',
             password: '',
-            confirmPassword: ''
+            confirmPassword: '',
+            profileImg:''
         },
         onSubmit: (values) => {
             onSubmitButtonPress(values)
@@ -31,7 +34,8 @@ export const useSignUp = () => {
                 email: '',
                 phoneNumber: '',
                 password: '',
-                confirmPassword: ''
+                confirmPassword: '',
+                profileImg:''
             },
             errors: {},
         });
@@ -54,12 +58,24 @@ export const useSignUp = () => {
         const sanitizedValue = removeEmojis(value);
         setFieldValue(field, sanitizedValue);
     };
+    const onImgPickerPress = async () =>{
+        Keyboard.dismiss()
+        await requestCameraPermission().then(() => {
+            selectSingleImage().then(res => {
+                if(res?.path){
+                    setFieldValue('profileImg', res?.path);
+                }
+           
+            });
+        });
+    }
 
     return {
         formik,
         setFieldValue,
         onLoginPress,
         handleInputChange,
-        loading
+        loading,
+        onImgPickerPress,
     };
 };

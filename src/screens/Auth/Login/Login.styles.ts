@@ -6,10 +6,10 @@ import commonStyles from "../../../theme/commonStyles";
 
 export const styles = StyleSheet.create({
     upperContainer: {
-        flex: 4,
+        flex: 2,
     },
     lowerContainer: {
-        flex: 8,
+        flex: 9,
         backgroundColor: COLORS.PRIMARY_WHITE,
         borderTopLeftRadius: verticalScale(34),
         borderTopRightRadius: verticalScale(34),

@@ -45,6 +45,10 @@ const useSignUpForm = ({ initialValues, onSubmit }: UseFormProps) => {
     const debounceTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const setFieldValue = (field: keyof SignUpFormValues, value: string) => {
+        if(field == 'profileImg'){
+            formik.setFieldValue(field, value);
+            return
+        }
         formik.setFieldValue(field, value);
 
         if (debounceTimeout.current) {

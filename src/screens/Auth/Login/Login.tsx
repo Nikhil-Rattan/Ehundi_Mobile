@@ -35,7 +35,6 @@ const Login = () => {
           <KeyboardAwareScrollView
             bounces={false}
             keyboardShouldPersistTaps='handled'
-            extraHeight={-250}
             enableAutomaticScroll
             showsVerticalScrollIndicator={false}
             style={styles.scrollContainer}
