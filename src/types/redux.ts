@@ -3,6 +3,7 @@ export interface UserDataProps {
     email: string,
     password: string,
     access_token: string
+    profileImg: string
 
 }
 export interface AuthInterface {

@@ -36,12 +36,14 @@ export const useLogin = () => {
         navigation.navigate('SignUp')
     };
     const onSubmitButtonPress = async (_values: LoginFormValues) => {
-        const userDetails ={
-            access_token: "1234", 
-            email: "sam@gmail.com", 
-            fullName: "Sam Doe", 
-            password: "Test@123", 
-            phoneNumber: "7087701418"}
+        const userDetails = {
+            access_token: "1234",
+            email: "sam@gmail.com",
+            fullName: "Sam Doe",
+            password: "Test@123",
+            phoneNumber: "7087701418",
+            profileImg: ""
+        }
         Keyboard.dismiss()
         setLoading(true)
         setTimeout(() => {

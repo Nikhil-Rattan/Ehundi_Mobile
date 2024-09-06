@@ -1,8 +1,8 @@
 import React from 'react'
 import { SafeAreaView, Image, TouchableOpacity, View, FlatList, Text, ImageBackground, StatusBar, Platform } from 'react-native'
 import { useHome } from './Hooks/useHome';
-import commonStyles, { hitSlopProp } from '../../../theme/commonStyles';
-import { Loader, CustomImage } from '../../../components';
+import commonStyles from '../../../theme/commonStyles';
+import { Loader, CustomHeader } from '../../../components';
 import { styles } from './Home.styles';
 import { IMAGES } from '../../../assets';
 import { COLORS } from "../../../theme/colors";
@@ -38,23 +38,8 @@ const Home = () => {
         backgroundColor={COLORS.PRIMARY_WHITE}
       />
       <SafeAreaView style={commonStyles.container}>
-        <View style={styles.headerContainer}>
-          <Image
-            source={IMAGES.logo}
-            style={{ ...commonStyles.icon56 }}
-          />
-          <Text style={styles.logoTxtStyle}>{strings.common.ehundi}</Text>
-          <TouchableOpacity
-            hitSlop={hitSlopProp}
-            activeOpacity={0.7}
-            onPress={onProfilePress}>
-            <CustomImage
-              source={IMAGES.dummyUserImg}
-              style={styles.userImgContainer}
-              loaderContainer={styles.userImgContainer}
-            />
-          </TouchableOpacity>
-        </View>
+        <CustomHeader
+          onRightIconPress={onProfilePress} />
         <View style={styles.listContainer}>
           <Text style={styles.donationTxtStyle}>{strings.home.donations}</Text>
           <FlatList
