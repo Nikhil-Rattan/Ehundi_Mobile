@@ -79,7 +79,7 @@ const DonationDetails = ({ route }) => {
 
                     </View>
                     <CustomButton
-                        title={strings.donationDetail.donateNow}
+                        title={strings.donationDetail.donateNow?.toUpperCase()}
                         onPress={onDonateBtnPress}
                         customizeBtnStyle={styles.btnBackgroundColor}
                         btnTxtStyle={styles.txtColor} />

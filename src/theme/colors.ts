@@ -9,5 +9,7 @@ export const COLORS = {
   CHARCOAL_OPACITY_20: 'rgba(51, 51, 51, 0.4)',
   OFF_WHITE:"#F3F3F3",
   SECONDARY_ORANGE:"#ff6b03",
-  MUSTARD:"#c56418"
+  BTN_ORANGE:'#fb7108',
+  MUSTARD:"#c56418",
+  BTN_BLACK:"#010100"
 };

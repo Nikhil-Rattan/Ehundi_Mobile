@@ -53,7 +53,7 @@ export const en = {
         prasadam:'Kindly collect your Prasadam from the temple by today.'
     },
     profile:{
-        edit:'Edit Profile',
+        edit:'View Profile',
         logout:'Log out',
         logOutDescription: "Are you sure to log out of your account?",
     },

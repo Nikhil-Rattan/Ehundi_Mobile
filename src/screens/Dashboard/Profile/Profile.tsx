@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, Image, View, Text, ImageBackground, StatusBar, Platform } from 'react-native'
+import { SafeAreaView, Image, View, Text, ImageBackground, StatusBar, Platform, TouchableOpacity } from 'react-native'
 import commonStyles from '../../../theme/commonStyles';
 import { CustomButton, CustomHeader, CustomImage, CustomModal } from '../../../components';
 import { styles } from "./Profile.styles"
@@ -17,10 +17,18 @@ const Profile = () => {
     onLogoutPress,
     handleCancel,
     handleConfirm,
-    isModalVisible
+    isModalVisible,
+    isEditView
   } = useProfile();
   const { userData } = useSelector((state: AllReducer) => state.auth || {});
 
+  const IconRow = ({ iconSource }) => (
+    <TouchableOpacity
+      activeOpacity={0.9}
+      style={styles.btnContainer}>
+      <Image source={iconSource} style={styles.iconStyle} />
+    </TouchableOpacity>
+  );
   return (
     <ImageBackground
       source={IMAGES.bgImg}
@@ -43,18 +51,32 @@ const Profile = () => {
             loaderContainer={styles.userImgContainer}
           />
           <Text style={styles.nameTxtStyle}>{userData?.fullName}</Text>
-          <View style={[commonStyles.rowSpaceEvenly, styles.fullWidth]}>
-            <CustomButton
-              title={strings.profile.edit}
-              customizeBtnStyle={styles.btnStyle}
-              onPress={onEditProfilePress}
-            />
-            <CustomButton
-              title={strings.profile.logout}
-              customizeBtnStyle={styles.btnStyle}
-              onPress={onLogoutPress}
-            />
-          </View>
+          {isEditView ?
+            <View style={[commonStyles.rowSpaceEvenly, styles.fullWidth, { flexDirection: 'row', position: 'relative', bottom: -60, marginTop: -50 }]}>
+
+              <IconRow
+                iconSource={IMAGES.donateIcon} />
+
+              <IconRow
+                iconSource={IMAGES.donationsIcon} />
+
+              <IconRow
+                iconSource={IMAGES.myAccountIcon} />
+            </View> 
+            :
+            <View style={[commonStyles.rowSpaceEvenly, styles.fullWidth]}>
+              <CustomButton
+                title={strings.profile.edit}
+                customizeBtnStyle={styles.btnStyle}
+                onPress={onEditProfilePress}
+              />
+              <CustomButton
+                title={strings.profile.logout}
+                customizeBtnStyle={styles.btnStyle}
+                onPress={onLogoutPress}
+              />
+            </View>
+          }
         </View>
         {isModalVisible ?
           <CustomModal

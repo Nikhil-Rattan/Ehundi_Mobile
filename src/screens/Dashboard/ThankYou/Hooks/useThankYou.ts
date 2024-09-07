@@ -9,7 +9,7 @@ export const useThankYou = () => {
     useEffect(() => {
         setTimeout(() => {
             navigation.navigate('Home')
-        }, 3000);
+        }, 6000);
     }, [])
 
     const onProfilePress = () => {

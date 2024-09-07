@@ -3,6 +3,7 @@ import { StackParamList } from "../../../../navigation/types";
 import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import strings from "../../../../localization"
+import { Keyboard } from "react-native";
 
 export const useDonationDetails = () => {
     const navigation = useNavigation<NativeStackNavigationProp<StackParamList>>();
@@ -16,6 +17,7 @@ export const useDonationDetails = () => {
     };
     const onDonateBtnPress = () => {
         if (amount && amount > 0) {
+            Keyboard.dismiss()
             navigation.navigate("ThankYou")
         }
         else {

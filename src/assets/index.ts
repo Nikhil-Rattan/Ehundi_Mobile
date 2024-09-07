@@ -20,5 +20,8 @@ export const IMAGES = {
     profileImgPlaceHolder: require("./icons/imgPlaceHolder.png"),
     cameraIcon: require("./icons/camera.png"),
     logOutIcon: require("./icons/logout.png"),
+    myAccountIcon: require("./icons/myAccount.png"),
+    donateIcon:require("./icons/donate.png"),
+    donationsIcon:require("./icons/donations.png")
 
 };

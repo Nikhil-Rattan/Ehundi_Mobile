@@ -1,8 +1,9 @@
 
 import { Platform, StyleSheet } from "react-native";
 import { COLORS } from "../../../theme/colors";
-import { moderateScale, verticalScale } from "../../../theme/responsiveSize";
+import { moderateScale, scale, verticalScale } from "../../../theme/responsiveSize";
 import commonStyles from "../../../theme/commonStyles";
+import { ImageEnum } from "../../../config/Enum";
 
 export const styles = StyleSheet.create({
     listContainer: {
@@ -13,6 +14,7 @@ export const styles = StyleSheet.create({
         marginHorizontal: verticalScale(20),
         backgroundColor:COLORS.PRIMARY_WHITE,
         alignItems: 'center',
+        borderRadius:verticalScale(15)
 
     },
     headetTxtStyle: {
@@ -43,6 +45,27 @@ export const styles = StyleSheet.create({
     },
     fullWidth:{
         width:'100%'
+    },
+    btnContainer:{
+        height:scale(75),
+        width:scale(75),
+        borderRadius:moderateScale(66),
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor:COLORS.BTN_ORANGE,
+        borderWidth:verticalScale(2),
+        borderColor:COLORS.PRIMARY_WHITE,
+    },
+    iconStyle:{
+        height:scale(66),
+        width:scale(66),
+        resizeMode:ImageEnum.contain
+    },
+    viewContainer:{
+        flexDirection: 'row', 
+        position: 'relative', 
+        bottom: -60, 
+        marginTop: verticalScale(-50)
     }
 
 

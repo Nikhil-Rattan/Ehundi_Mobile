@@ -8,5 +8,6 @@ export const FONTS = {
     light: 'Poppins-light',
     extraLight: 'Poppins-ExtraLight',
     thin: 'Poppins-Thin',
-    redressed_regular:'Redressed-Regular'
+    redressed_regular:'Redressed-Regular',
+    mediumItalic:'Poppins-Italic'
 };

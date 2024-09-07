@@ -32,7 +32,7 @@ interface Style {
     icon78: ImageStyle;
     icon25: ImageStyle;
     icon120: ImageStyle;
-    icon160: ImageStyle;
+    icon200: ImageStyle;
     icon80:ImageStyle;
 }
 
@@ -172,9 +172,9 @@ export default StyleSheet.create<Style>({
         height: scale(120),
         resizeMode: ImageEnum.contain,
     },
-    icon160: {
-        width: scale(160),
-        height: scale(160),
+    icon200: {
+        width: scale(200),
+        height: scale(200),
         resizeMode: ImageEnum.contain,
     },
     icon80:{

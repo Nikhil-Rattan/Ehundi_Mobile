@@ -3,6 +3,7 @@ import { Platform, StyleSheet } from "react-native";
 import { COLORS } from "../../../theme/colors";
 import { moderateScale, verticalScale } from "../../../theme/responsiveSize";
 import commonStyles from "../../../theme/commonStyles";
+import { FONTS } from "../../../theme/fonts";
 
 export const styles = StyleSheet.create({
 
@@ -32,19 +33,20 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
     },
     imgStyle:{
-        ...commonStyles.icon160,
+        ...commonStyles.icon200,
         alignSelf:'center'
     },
     paragraphStlye:{
-        marginTop:verticalScale(25),
+        marginTop:verticalScale(15),
         ...commonStyles.medium16,
+        fontFamily:FONTS.mediumItalic,
         textAlign:'center'
     },
     btnBackgroundColor:{
-        backgroundColor:COLORS.PRIMARY_WHITE
+        backgroundColor:COLORS.BTN_BLACK
     },
     txtColor:{
-        color:COLORS.PRIMARY_ORANGE
+        color:COLORS.PRIMARY_WHITE
     },
     inputContainer:{
         marginTop:verticalScale(22),
@@ -84,8 +86,8 @@ export const styles = StyleSheet.create({
         borderLeftColor:COLORS.ECLIPSE,
     },
     errorStyle: {
-        ...commonStyles.regular12,
-        color: COLORS.OFF_WHITE,
+        ...commonStyles.medium12,
+        color: COLORS.BLACK,
         marginTop: verticalScale(4),
         marginLeft: verticalScale(4),
     },

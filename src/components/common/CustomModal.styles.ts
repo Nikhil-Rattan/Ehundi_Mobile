@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
     title: {
         ...commonStyles.semiBold16,
         textAlign: 'center',
-        marginBottom: verticalScale(15)
     },
     btnContainer: {
         width: '70%',
