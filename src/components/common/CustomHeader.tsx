@@ -9,14 +9,16 @@ import { useSelector } from 'react-redux'
 import { AllReducer } from 'src/types'
 
 interface HeaderProps {
-    onRightIconPress: () => void;
+    onRightIconPress?: () => void;
     headerTxt?: string;
     rightIcon?: boolean;
+    txtStyle?: object
 }
 const CustomHeader: FC<HeaderProps> = ({
     onRightIconPress,
     headerTxt = strings.common.ehundi,
-    rightIcon = true
+    rightIcon = true,
+    txtStyle
 
 }) => {
     const { userData } = useSelector((state: AllReducer) => state.auth || {});
@@ -26,19 +28,21 @@ const CustomHeader: FC<HeaderProps> = ({
                 source={IMAGES.logo}
                 style={{ ...commonStyles.icon56 }}
             />
-            <Text style={styles.logoTxtStyle}>{headerTxt}</Text>
-            {rightIcon ?
-                <TouchableOpacity
-                    hitSlop={hitSlopProp}
-                    activeOpacity={0.7}
-                    onPress={onRightIconPress}>
+            <Text style={{ ...styles.logoTxtStyle, ...txtStyle }}>{headerTxt}</Text>
+
+            <TouchableOpacity
+                hitSlop={hitSlopProp}
+                activeOpacity={0.7}
+                onPress={rightIcon ? onRightIconPress : () => { }}>
+                {rightIcon ?
                     <CustomImage
-                        source={userData?.profileImg ? { uri: userData?.profileImg } : IMAGES.dummyUserImg}
+                        source={rightIcon ? userData?.profileImg ? { uri: userData?.profileImg } : IMAGES.dummyUserImg : ''}
                         style={styles.userImgContainer}
                         loaderContainer={styles.userImgContainer}
                     />
-                </TouchableOpacity>
-                : null}
+                    : null}
+            </TouchableOpacity>
+
         </View>
     )
 }

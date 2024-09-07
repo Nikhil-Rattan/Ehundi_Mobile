@@ -33,6 +33,7 @@ interface Style {
     icon25: ImageStyle;
     icon120: ImageStyle;
     icon160: ImageStyle;
+    icon80:ImageStyle;
 }
 
 export const hitSlopProp = {
@@ -174,6 +175,11 @@ export default StyleSheet.create<Style>({
     icon160: {
         width: scale(160),
         height: scale(160),
+        resizeMode: ImageEnum.contain,
+    },
+    icon80:{
+        width: scale(80),
+        height: scale(80),
         resizeMode: ImageEnum.contain,
     }
 

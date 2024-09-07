@@ -6,7 +6,7 @@ const AuthStack = createNativeStackNavigator<AuthStackParamList>();
 
 const AuthStackNavigator = () => {
     return (
-        <AuthStack.Navigator screenOptions={{ headerShown: false }}>
+        <AuthStack.Navigator screenOptions={{ headerShown: false, presentation: 'containedTransparentModal', animation: 'fade' }}>
             <AuthStack.Screen name="Login" component={Login} />
             <AuthStack.Screen name="SignUp" component={SignUp} />
             <AuthStack.Screen name="ForgotPassword" component={ForgotPassword} />

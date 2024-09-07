@@ -52,6 +52,11 @@ export const en = {
         shareReceipt:`We will send you the receipt for your Donation on the Registered Email ID.`,
         prasadam:'Kindly collect your Prasadam from the temple by today.'
     },
+    profile:{
+        edit:'Edit Profile',
+        logout:'Log out',
+        logOutDescription: "Are you sure to log out of your account?",
+    },
     error: {
         isRequired: "is required.",
         invalid_email: "Please enter a valid email",

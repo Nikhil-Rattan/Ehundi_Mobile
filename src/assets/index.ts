@@ -19,5 +19,6 @@ export const IMAGES = {
     crossIcon: require("./icons/cross.png"),
     profileImgPlaceHolder: require("./icons/imgPlaceHolder.png"),
     cameraIcon: require("./icons/camera.png"),
+    logOutIcon: require("./icons/logout.png"),
 
 };

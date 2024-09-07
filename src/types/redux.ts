@@ -1,5 +1,5 @@
 export interface UserDataProps {
-    name: string,
+    fullName: string,
     email: string,
     password: string,
     access_token: string
