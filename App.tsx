@@ -4,17 +4,28 @@ import store from './src/redux/store'
 import SplashScreen from 'react-native-splash-screen';
 import { Provider } from 'react-redux';
 import FlashMessage from 'react-native-flash-message';
-import { StatusBar, StyleSheet } from 'react-native';
+import { BackHandler, StatusBar, StyleSheet } from 'react-native';
 import { moderateScaleVertical, textScale } from './src/theme/responsiveSize';
 import { positionEnum } from './src/config/Enum';
 import checkLocalStorage from './src/helper/handleLocalStorage';
 
 const App = () => {
+
   useEffect(() => {
     checkLocalStorage();
     setTimeout(() => {
       SplashScreen.hide();
     }, 800);
+  }, []);
+
+
+  const handleBackPress = () => {
+    return false;
+  };
+
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', handleBackPress);
+    return () => backHandler.remove();
   }, []);
 
   return (
