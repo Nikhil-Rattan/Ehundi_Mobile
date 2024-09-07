@@ -5,6 +5,7 @@ import ForgotPassword from "./Auth/ForgotPassword/ForgotPassword";
 import Home from "./Dashboard/Home/Home";
 import Profile from "./Dashboard/Profile/Profile";
 import DonationDetails from "./Dashboard/DonationDetails/DonationDetails";
+import ThankYou from "./Dashboard/ThankYou/ThankYou";
 
 export {
     Login,
@@ -13,5 +14,6 @@ export {
     TwoFactor,
     Home,
     Profile,
-    DonationDetails
+    DonationDetails,
+    ThankYou
 };

@@ -9,6 +9,7 @@ export const IMAGES = {
     vrindavanchandraVigrahaSeva: require("./images/Home/radhaKrishna.png"),
     vigrahaSeva: require("./images/Home/krishna.png"),
     dummyUserImg: require("./images/Home/dummyUser.png"),
+    prashadImg: require("./images/Home/prashad.png"),
 
 
     // Icons

@@ -46,6 +46,12 @@ export const en = {
         donateNow:'Donate Now',
        poojaDonation: `The Samaj was conceived by a few like-minded devotees of Lord Subramania in the mid-forties in the central suburb of Matunga, the then 'mini-Madras' of Mumbai. These God-loving migrants from the south cherished their cultural heritage based on the bhakti-cult propounded by our ancient sages and saints. The bhakti-movement of south India culminated in the propitiation of divinity in all its forms and expression, involving the community as a whole.`
     },
+    thankYou:{
+        thankYou:"Thank You",
+        forDonation:"For your Donation",
+        shareReceipt:`We will send you the receipt for your Donation on the Registered Email ID.`,
+        prasadam:'Kindly collect your Prasadam from the temple by today.'
+    },
     error: {
         isRequired: "is required.",
         invalid_email: "Please enter a valid email",

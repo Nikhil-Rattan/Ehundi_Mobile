@@ -18,7 +18,8 @@ export type AuthStackParamList = {
 export type HomeStackParamList = {
     Home: undefined | object;
     Profile: undefined | object;
-    DonationDetail: DonationRouteProps
+    DonationDetail: DonationRouteProps;
+    ThankYou: undefined | object;
 };
 
 // Consolidated Stack Param List

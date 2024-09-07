@@ -16,7 +16,7 @@ export const useDonationDetails = () => {
     };
     const onDonateBtnPress = () => {
         if (amount && amount > 0) {
-            // navigation.navigate()
+            navigation.navigate("ThankYou")
         }
         else {
             setAmountError(strings.error.enterAmount)
