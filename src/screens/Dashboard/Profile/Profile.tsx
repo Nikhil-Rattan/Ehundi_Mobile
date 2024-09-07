@@ -52,7 +52,7 @@ const Profile = () => {
           />
           <Text style={styles.nameTxtStyle}>{userData?.fullName}</Text>
           {isEditView ?
-            <View style={[commonStyles.rowSpaceEvenly, styles.fullWidth, { flexDirection: 'row', position: 'relative', bottom: -60, marginTop: -50 }]}>
+            <View style={[commonStyles.rowSpaceEvenly, styles.fullWidth, styles.viewContainer]}>
 
               <IconRow
                 iconSource={IMAGES.donateIcon} />
