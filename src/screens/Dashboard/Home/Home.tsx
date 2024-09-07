@@ -12,13 +12,15 @@ const Home = () => {
   const {
     homeData,
     onProfilePress,
-    loading
+    loading,
+    onItemPress
   } = useHome();
 
-  const renderItem = ({ item }: { item: { name: string, image: any } }) => (
+  const renderItem = ({ item }: { item: { name: string, image: any, id: number } }) => (
     <TouchableOpacity
       style={styles.itemContainer}
-      activeOpacity={0.95}>
+      activeOpacity={0.95}
+      onPress={() => onItemPress(item)}>
       <Image source={item.image} style={commonStyles.icon120} />
       <View style={styles.itemBtnStyle}>
         <Text style={styles.itemText}>{item.name}</Text>
@@ -45,7 +47,7 @@ const Home = () => {
           <FlatList
             data={homeData}
             renderItem={renderItem}
-            keyExtractor={(_item, index) => index.toString()}
+            keyExtractor={(item) => item?.id?.toString()}
             numColumns={2}
             contentContainerStyle={styles.flatListContainer}
             showsVerticalScrollIndicator={false}

@@ -11,10 +11,12 @@ import { AllReducer } from 'src/types'
 interface HeaderProps {
     onRightIconPress: () => void;
     headerTxt?: string;
+    rightIcon?: boolean;
 }
 const CustomHeader: FC<HeaderProps> = ({
     onRightIconPress,
-    headerTxt = strings.common.ehundi
+    headerTxt = strings.common.ehundi,
+    rightIcon = true
 
 }) => {
     const { userData } = useSelector((state: AllReducer) => state.auth || {});
@@ -25,16 +27,18 @@ const CustomHeader: FC<HeaderProps> = ({
                 style={{ ...commonStyles.icon56 }}
             />
             <Text style={styles.logoTxtStyle}>{headerTxt}</Text>
-            <TouchableOpacity
-                hitSlop={hitSlopProp}
-                activeOpacity={0.7}
-                onPress={onRightIconPress}>
-                <CustomImage
-                    source={userData?.profileImg ? { uri: userData?.profileImg } : IMAGES.dummyUserImg}
-                    style={styles.userImgContainer}
-                    loaderContainer={styles.userImgContainer}
-                />
-            </TouchableOpacity>
+            {rightIcon ?
+                <TouchableOpacity
+                    hitSlop={hitSlopProp}
+                    activeOpacity={0.7}
+                    onPress={onRightIconPress}>
+                    <CustomImage
+                        source={userData?.profileImg ? { uri: userData?.profileImg } : IMAGES.dummyUserImg}
+                        style={styles.userImgContainer}
+                        loaderContainer={styles.userImgContainer}
+                    />
+                </TouchableOpacity>
+                : null}
         </View>
     )
 }

@@ -1,4 +1,5 @@
 import { SignUpFormValues } from "src/types";
+import { DonationRouteProps } from "src/types/DonationDetail";
 
 export const NAVIGATION = {} as const;
 
@@ -17,6 +18,7 @@ export type AuthStackParamList = {
 export type HomeStackParamList = {
     Home: undefined | object;
     Profile: undefined | object;
+    DonationDetail: DonationRouteProps
 };
 
 // Consolidated Stack Param List

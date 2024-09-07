@@ -42,6 +42,10 @@ export const en = {
         radheShyamSeve:"Annadhanam",
         sadhuBhojan:"Temple Maintenance"
     },
+    donationDetail:{
+        donateNow:'Donate Now',
+       poojaDonation: `The Samaj was conceived by a few like-minded devotees of Lord Subramania in the mid-forties in the central suburb of Matunga, the then 'mini-Madras' of Mumbai. These God-loving migrants from the south cherished their cultural heritage based on the bhakti-cult propounded by our ancient sages and saints. The bhakti-movement of south India culminated in the propitiation of divinity in all its forms and expression, involving the community as a whole.`
+    },
     error: {
         isRequired: "is required.",
         invalid_email: "Please enter a valid email",
@@ -51,7 +55,8 @@ export const en = {
         nameLength: 'Name should contain atleast 2 characters',
         confirmPasswordValidate: 'Confirm password and password must be same',
         phoneNumberLength: "Phone number should contain 10 characters",
-        matchOtpError: "Please enter a valid OTP"
+        matchOtpError: "Please enter a valid OTP",
+        enterAmount:"Please enter the amount"
     },
     placeHolder: {
         emailPlaceHolder: 'Enter your email address here',
@@ -59,7 +64,9 @@ export const en = {
         fullNamePlaceHolder: 'Enter your Full Name here',
         confirmPasswordPlaceHolder: 'Enter your confirm password',
         phoneNumberPlaceHolder: 'Enter your phone number',
-        countryCodePlaceHolder: '+91'
+        countryCodePlaceHolder: '+91',
+        INR:"INR",
+        rupee:'₹'
     },
     permission_text: {
         disableLocationMsg: "Please enable location permission to the start shift",

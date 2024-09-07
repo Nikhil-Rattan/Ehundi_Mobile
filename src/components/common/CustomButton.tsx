@@ -25,11 +25,11 @@ const CustomButton: React.FC<CustomButtonProps> = ({
 }) => {
     return (
         <TouchableOpacity
-            style={[styles.btnStyle, customizeBtnStyle, { backgroundColor: isdisable ? COLORS.OFF_WHITE : COLORS.PRIMARY_ORANGE }]}
+            style={[styles.btnStyle, { backgroundColor: isdisable ? COLORS.OFF_WHITE : COLORS.PRIMARY_ORANGE },  customizeBtnStyle]}
             onPress={onPress}
             disabled={isdisable}
             activeOpacity={0.8}>
-            <Text style={[commonStyles.medium16, btnTxtStyle, { color: isdisable ? COLORS.DARK_GRAY : COLORS.OFF_WHITE }]}>{title}</Text>
+            <Text style={[commonStyles.medium16, { color: isdisable ? COLORS.DARK_GRAY : COLORS.OFF_WHITE },btnTxtStyle]}>{title}</Text>
         </TouchableOpacity>
     );
 };
