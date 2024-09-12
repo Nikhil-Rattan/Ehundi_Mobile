@@ -49,9 +49,9 @@ export const useSignUp = () => {
         setTimeout(() => {
             setLoading(false)
             resetValues()
-            showSuccess(strings.signUp.otpSent)
-            navigation.navigate('TwoFactoAuth', { data: values })
         }, 800);
+        showSuccess(strings.signUp.otpSent)
+        navigation.navigate('TwoFactoAuth', { data: values })
 
     }
     const handleInputChange = (field: keyof SignUpFormValues, value: string) => {

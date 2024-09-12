@@ -6,6 +6,7 @@ import Home from "./Dashboard/Home/Home";
 import Profile from "./Dashboard/Profile/Profile";
 import DonationDetails from "./Dashboard/DonationDetails/DonationDetails";
 import ThankYou from "./Dashboard/ThankYou/ThankYou";
+import EditProfile from "./Dashboard/Profile/EditProfile/EditProfile";
 
 export {
     Login,
@@ -15,5 +16,6 @@ export {
     Home,
     Profile,
     DonationDetails,
-    ThankYou
+    ThankYou,
+    EditProfile,
 };

@@ -4,6 +4,7 @@ export interface UserDataProps {
     password: string,
     access_token: string
     profileImg: string
+    phoneNumber:string;
 
 }
 export interface AuthInterface {

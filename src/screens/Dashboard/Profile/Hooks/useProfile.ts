@@ -1,7 +1,7 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { StackParamList } from "../../../../navigation/types";
-import { useNavigation } from "@react-navigation/native";
-import { useEffect, useState } from "react";
+import { useFocusEffect, useNavigation } from "@react-navigation/native";
+import { useCallback, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { saveUserData } from "../../../../redux/Slice/authSlice";
 import { clearAllItem } from "../../../../redux/Api/ClientApis/clientApi";
@@ -25,9 +25,16 @@ export const useProfile = () => {
     
       useEffect(() => {
         const backHandler = BackHandler.addEventListener('hardwareBackPress', handleBackPress);
-    
         return () => backHandler.remove();
       }, [isEditView]);
+
+      useFocusEffect(
+        useCallback(() => {
+          setIsEditView(false)
+        }, [])
+      );
+      
+      
 
 
     const onEditProfilePress = () => {
@@ -36,6 +43,16 @@ export const useProfile = () => {
     const onLogoutPress = () => {
         setIsModalVisible(true);
     };
+    const onDonateBtnPress = () =>{
+        navigation.navigate('Home')
+    }
+    const onDonationsBtnPress = () =>{
+        // navigation.navigate('Home')
+    }
+    const onViewAccountPress = () => {
+        navigation.navigate('EditProfile')
+
+    }
 
     const handleConfirm = () => {
         setIsModalVisible(false);
@@ -53,6 +70,9 @@ export const useProfile = () => {
         handleCancel,
         handleConfirm,
         isModalVisible,
-        isEditView
+        isEditView,
+        onDonateBtnPress,
+        onDonationsBtnPress,
+        onViewAccountPress
     };
 };

@@ -49,6 +49,9 @@ export const styles = StyleSheet.create({
     resendTxt:{
         ...commonStyles.medium12, 
         textAlign:'center'
+    },
+    whitColorTxt:{
+        color:COLORS.PRIMARY_WHITE
     }
 
 });

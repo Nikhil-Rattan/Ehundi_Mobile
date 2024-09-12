@@ -64,8 +64,8 @@ export const styles = StyleSheet.create({
     viewContainer:{
         flexDirection: 'row', 
         position: 'relative', 
-        bottom: -60, 
-        marginTop: verticalScale(-50)
+        bottom: -85, 
+        marginTop: verticalScale(-65)
     }
 
 

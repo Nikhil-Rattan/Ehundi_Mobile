@@ -76,6 +76,8 @@ export const useTwoFactor = (params: SignUpFormValues) => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
+            input.current?.clear()
+            setOtpInput('')
             setIsResendButtonDisable(true);
             showSuccess(strings.otp.otpSentSuccess);
         }, 800);

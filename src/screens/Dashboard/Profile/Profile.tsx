@@ -8,7 +8,7 @@ import { COLORS } from "../../../theme/colors";
 import strings from '../../../localization';
 import { useProfile } from './Hooks/useProfile';
 import { useSelector } from 'react-redux';
-import { AllReducer } from 'src/types';
+import { AllReducer } from '../../../types';
 
 const Profile = () => {
 
@@ -18,16 +18,24 @@ const Profile = () => {
     handleCancel,
     handleConfirm,
     isModalVisible,
-    isEditView
+    isEditView,
+    onDonateBtnPress,
+    onDonationsBtnPress,
+    onViewAccountPress
   } = useProfile();
   const { userData } = useSelector((state: AllReducer) => state.auth || {});
 
-  const IconRow = ({ iconSource }) => (
-    <TouchableOpacity
-      activeOpacity={0.9}
-      style={styles.btnContainer}>
-      <Image source={iconSource} style={styles.iconStyle} />
-    </TouchableOpacity>
+  const IconRow = ({ iconSource, text, onBtnPress }) => (
+    <View style={commonStyles.centerAlignedView}>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        style={styles.btnContainer}
+        onPress={onBtnPress}>
+        <Image source={iconSource} style={styles.iconStyle} />
+
+      </TouchableOpacity>
+      <Text style={commonStyles.medium16}>{text}</Text>
+    </View>
   );
   return (
     <ImageBackground
@@ -55,14 +63,20 @@ const Profile = () => {
             <View style={[commonStyles.rowSpaceEvenly, styles.fullWidth, styles.viewContainer]}>
 
               <IconRow
-                iconSource={IMAGES.donateIcon} />
+                iconSource={IMAGES.donateIcon}
+                text={strings.profile.donate}
+                onBtnPress={onDonateBtnPress} />
 
               <IconRow
-                iconSource={IMAGES.donationsIcon} />
+                iconSource={IMAGES.donationsIcon}
+                text={strings.profile.donation} 
+                onBtnPress={onDonationsBtnPress}/>
 
               <IconRow
-                iconSource={IMAGES.myAccountIcon} />
-            </View> 
+                iconSource={IMAGES.myAccountIcon}
+                text={strings.profile.myAccount}
+                onBtnPress={onViewAccountPress} />
+            </View>
             :
             <View style={[commonStyles.rowSpaceEvenly, styles.fullWidth]}>
               <CustomButton

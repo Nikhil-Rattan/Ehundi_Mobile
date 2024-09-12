@@ -20,6 +20,7 @@ export type HomeStackParamList = {
     Profile: undefined | object;
     DonationDetail: DonationRouteProps;
     ThankYou: undefined | object;
+    EditProfile: undefined | object;
 };
 
 // Consolidated Stack Param List

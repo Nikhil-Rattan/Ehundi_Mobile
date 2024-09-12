@@ -9,7 +9,7 @@ import { CustomButton, CustomInput, Loader } from '../../../components';
 import { useSignUp } from './Hooks/useSignUp';
 import strings from '../../../localization';
 
-const Login = () => {
+const SignUp = () => {
   const {
     formik,
     handleInputChange,
@@ -164,4 +164,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

@@ -56,6 +56,11 @@ export const en = {
         edit:'View Profile',
         logout:'Log out',
         logOutDescription: "Are you sure to log out of your account?",
+        donate:"Donate",
+        donation:"Donations",
+        myAccount:'My Account',
+        updateProfile:"Update Profile",
+        profileSuccess:"Profile update successfullly!"
     },
     error: {
         isRequired: "is required.",

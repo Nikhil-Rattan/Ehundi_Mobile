@@ -1,8 +1,9 @@
 import { FC, useState } from 'react';
-import { ActivityIndicator, ColorValue, View } from 'react-native';
+import { ActivityIndicator, ColorValue, Image, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import styles from './CustomImage.styles'
 import { COLORS } from "../../theme/colors";
+import { IMAGES } from '../../assets';
 
 interface CustomImageProps {
     source: object | number;
@@ -11,6 +12,7 @@ interface CustomImageProps {
     loaderContainer?: object;
     loaderColor?: ColorValue | undefined;
     loaderSize?: 'small' | 'large' | undefined;
+    hasCameraIcon?: boolean
 }
 
 const CustomImage: FC<CustomImageProps> = props => {
@@ -19,7 +21,8 @@ const CustomImage: FC<CustomImageProps> = props => {
         style,
         loaderContainer,
         loaderSize,
-        loaderColor
+        loaderColor,
+        hasCameraIcon = false
     } = props;
     const [loading, setLoading] = useState<boolean>(true);
     return (
@@ -34,6 +37,11 @@ const CustomImage: FC<CustomImageProps> = props => {
                     setLoading(false);
                 }}
             />
+            {hasCameraIcon ?
+                <Image
+                    source={IMAGES.cameraIcon}
+                    style={styles.cameraIconStyle} />
+                : null}
             {loading && (
                 <View style={[styles.loader, loaderContainer]}>
                     <ActivityIndicator size={loaderSize} color={loaderColor || COLORS.PRIMARY_ORANGE} />
