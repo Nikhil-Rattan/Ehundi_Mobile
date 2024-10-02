@@ -6,11 +6,11 @@ import { useSelector } from 'react-redux';
 import { AllReducer } from '../types/redux';
 
 const RouteScreen = () => {
-    const { userData } = useSelector((state: AllReducer) => state.auth || {});
-
+    // const { userData } = useSelector((state: AllReducer) => state.auth || {});
+    const user = useSelector((state) => state.signIn.signData);
     return (
         <NavigationContainer>
-            {userData?.access_token ? MainStackNavigator() : AuthStackNavigator()}
+            {user?.token != null  ? MainStackNavigator() : AuthStackNavigator()}
         </NavigationContainer>
     );
 };

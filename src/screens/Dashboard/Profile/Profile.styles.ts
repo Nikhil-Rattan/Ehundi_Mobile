@@ -38,7 +38,15 @@ export const styles = StyleSheet.create({
     },
     nameTxtStyle:{
         ...commonStyles.semiBold16,
-        marginTop:verticalScale(20)
+        marginTop:verticalScale(5)
+    },
+    emailTxtStyle:{
+        ...commonStyles.medium14,
+        marginTop:verticalScale(5)
+    },
+    phoneTxtStyle:{
+        ...commonStyles.medium14,
+        marginTop:verticalScale(5)
     },
     btnStyle:{
         width:'40%',

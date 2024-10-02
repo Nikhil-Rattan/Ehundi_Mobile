@@ -34,13 +34,15 @@ export const en = {
         otpSentSuccess: 'OTP has been sent successfully!'
     },
     home:{
-        donations:"DONATIONS",
-        annaDan:"General Donation",
+        donations:"Dan Peti",
+        annaDan:"Ann Danam",
         gauDan:"Pooja Donation",
-        balajiSeva:"Corpus Donation",
-        jaganNathSeva:"Education Donation",
-        radheShyamSeve:"Annadhanam",
-        sadhuBhojan:"Temple Maintenance"
+        balajiSeva:"Upcoming Pooja",
+        // jaganNathSeva:"Education Donation",
+        // radheShyamSeve:"Annadhanam",
+        // sadhuBhojan:"Temple Maintenance"
+        
+
     },
     donationDetail:{
         donateNow:'Donate Now',

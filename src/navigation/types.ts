@@ -21,6 +21,8 @@ export type HomeStackParamList = {
     DonationDetail: DonationRouteProps;
     ThankYou: undefined | object;
     EditProfile: undefined | object;
+    Categories: undefined | object;
+    Payment: undefined | object;
 };
 
 // Consolidated Stack Param List

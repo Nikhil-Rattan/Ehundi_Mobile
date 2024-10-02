@@ -7,7 +7,8 @@ import Profile from "./Dashboard/Profile/Profile";
 import DonationDetails from "./Dashboard/DonationDetails/DonationDetails";
 import ThankYou from "./Dashboard/ThankYou/ThankYou";
 import EditProfile from "./Dashboard/Profile/EditProfile/EditProfile";
-
+import Categories from "./Dashboard/categories/Categories";
+import Payment from "./Dashboard/PaymentGateway/PaymentGateway";
 export {
     Login,
     SignUp,
@@ -18,4 +19,6 @@ export {
     DonationDetails,
     ThankYou,
     EditProfile,
+    Categories,
+    Payment
 };

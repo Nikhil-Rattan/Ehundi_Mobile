@@ -24,6 +24,7 @@ const Profile = () => {
     onViewAccountPress
   } = useProfile();
   const { userData } = useSelector((state: AllReducer) => state.auth || {});
+  const user = useSelector((state) => state.signIn.signData);
 
   const IconRow = ({ iconSource, text, onBtnPress }) => (
     <View style={commonStyles.centerAlignedView}>
@@ -54,11 +55,13 @@ const Profile = () => {
           txtStyle={styles.headetTxtStyle} />
         <View style={styles.listContainer}>
           <CustomImage
-            source={userData?.profileImg ? { uri: userData?.profileImg } : IMAGES.dummyUserImg}
+            source={user?.user?.profileImg ? { uri: user?.user?.profileImg } : IMAGES.dummyUserImg}
             style={styles.userImgContainer}
             loaderContainer={styles.userImgContainer}
           />
-          <Text style={styles.nameTxtStyle}>{userData?.fullName}</Text>
+          <Text style={styles.nameTxtStyle}>{user?.user?.fullName}</Text>
+          <Text style={styles.phoneTxtStyle}>{user?.user?.phoneNumber}</Text>
+          <Text style={styles.emailTxtStyle}>{user?.user?.email}</Text>
           {isEditView ?
             <View style={[commonStyles.rowSpaceEvenly, styles.fullWidth, styles.viewContainer]}>
 

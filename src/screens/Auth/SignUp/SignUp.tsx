@@ -51,7 +51,7 @@ const SignUp = () => {
                 <Image source={IMAGES.crossIcon} style={commonStyles.icon20} />
               </TouchableOpacity>
             </View>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               activeOpacity={0.7}
               onPress={onImgPickerPress}
               style={styles.imgContainer}>
@@ -73,7 +73,7 @@ const SignUp = () => {
                 />
               }
 
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             <CustomInput
               label={strings.signUp.fullname}
               value={formik.values.fullName}
