@@ -50,7 +50,7 @@ console.log(data);
         Keyboard.dismiss();
         dispatch(createDonationAPI(donationPayload));
 
-        if(donationData?.length > 0 && donationData?.donationId != '')
+        if(donationData?.donationId != '')
         navigation.navigate('Payment', {donationData: donationPayload, donationId: donationData?.donationId});
       } else {
         setAmountError(strings.error.enterAmount);

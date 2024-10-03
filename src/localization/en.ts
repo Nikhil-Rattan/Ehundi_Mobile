@@ -34,10 +34,11 @@ export const en = {
         otpSentSuccess: 'OTP has been sent successfully!'
     },
     home:{
-        donations:"Dan Peti",
+        donations:"Donations",
+        danpeti: "Dan Peti",
         annaDan:"Ann Danam",
-        gauDan:"Pooja Donation",
-        balajiSeva:"Upcoming Pooja",
+        poojaDonation:"Pooja Donation",
+        upcomingPooja:"Upcoming Pooja",
         // jaganNathSeva:"Education Donation",
         // radheShyamSeve:"Annadhanam",
         // sadhuBhojan:"Temple Maintenance"

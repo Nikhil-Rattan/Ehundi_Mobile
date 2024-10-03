@@ -42,8 +42,13 @@ const Home = () => {
       <SafeAreaView style={commonStyles.container}>
         <CustomHeader
           onRightIconPress={onProfilePress} />
-        <View style={styles.listContainer}>
-          <Text style={styles.donationTxtStyle}>{strings.home.donations}</Text>
+        <View style={[styles.listContainer, {marginTop:75}]}>
+          <Text style={styles.donationTxtStyle}>
+            Welcome to E Hundi
+          </Text>
+          <Text style={styles.donationTxtStyle}>
+            {strings.home.donations.toUpperCase()}
+          </Text>
           <FlatList
             data={homeData}
             renderItem={renderItem}

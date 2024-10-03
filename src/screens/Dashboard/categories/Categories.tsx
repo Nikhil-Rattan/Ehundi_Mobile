@@ -10,8 +10,8 @@ import strings from '../../../localization';
 import { CategoriesRouteProps } from '../../../types/Categories';
 
     const Categories = ({ route }) => {
-        const { categoriesData,isCategories }: CategoriesRouteProps = route.params;
-        console.log(isCategories,categoriesData);
+        const { categoriesData,isCategories, categoryName }: CategoriesRouteProps = route.params;
+        console.log(categoryName);
         
 
   const {
@@ -67,7 +67,7 @@ const renderItem = ({ item }: { item: { name: string; image: any; id: number;des
         <CustomHeader
           onRightIconPress={onProfilePress} />
         <View style={styles.listContainer}>
-          <Text style={styles.donationTxtStyle}>{strings.home.donations}</Text>
+          <Text style={styles.donationTxtStyle}>{categoryName.toUpperCase()}</Text>
           {/* <FlatList
             data={categoriesData}
             renderItem={renderItem}

@@ -40,6 +40,10 @@ export const styles = StyleSheet.create({
         ...commonStyles.semiBold16,
         marginTop:verticalScale(5)
     },
+    headingTxtStyle:{
+        ...commonStyles.semiBold24,
+        marginTop:verticalScale(5)
+    },
     emailTxtStyle:{
         ...commonStyles.medium14,
         marginTop:verticalScale(5)
@@ -74,7 +78,58 @@ export const styles = StyleSheet.create({
         position: 'relative', 
         bottom: -85, 
         marginTop: verticalScale(-65)
-    }
-
-
+    },
+    container: {
+        flex: 1,
+        padding: 16,
+        backgroundColor: '#fff',
+    },
+    header: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 16,
+    },
+    itemContainer: {
+        padding: 16,
+        marginVertical: 8,
+        marginHorizontal: 25,
+        borderWidth: 1,
+        borderColor: '#ccc',
+        borderRadius: 8,
+    },
+    title: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: '#333',
+        marginTop: 8,
+    },
+    poojaNames: {
+        fontSize: 14,
+        color: '#eee',
+    },
+    amount: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#eee',
+    },
+    name: {
+        fontSize: 14,
+        color: '#eee',
+    },
+    date: {
+        fontSize: 14,
+        color: '#eee',
+    },
+    nakshatra: {
+        fontSize: 14,
+        color: '#eee',
+    },
+    star: {
+        fontSize: 14,
+        color: '#eee',
+    },
+    status: {
+        fontSize: 14,
+        color:  'green'
+    },
 });

@@ -18,8 +18,8 @@ const PaymentGateway = ({ route }) => {
     const webViewRef = useRef(null);
     const user = useSelector(state => state.signIn.signData);
 
-    const workingKey = '06FC6438EAF07BF7A3CCFE9628BC8DFB'; // This should not be exposed to the client
-    const accessCode = 'AVFL21LI60CA78LFAC'; // Ensure this is the correct access code
+    const workingKey = 'A19FE830567F8A024AA0C0EE8B4E9F0E'; // This should not be exposed to the client
+    const accessCode = 'AVRC10IF64CA35CRAC'; // Ensure this is the correct access code
 
     console.log(donationData?.donationAmount,"donationId",donationId,"name",donationData?.name);
     
@@ -40,9 +40,8 @@ const PaymentGateway = ({ route }) => {
     const tid = generateTransactionId();
     
     // Use `tid` in your plainTextData
-    const plainTextData = `tid=${tid}&merchant_id=404791&order_id=3222221&currency=INR&amount=${donationData?.donationAmount }&redirect_url=https://ehundi-api.onrender.com/api/ccAvenue-response&cancel_url=https://ehundi-api.onrender.com/api/ccAvenue-response&language=EN&billing_name=${user?.user?.fullName}&billing_address=NA&billing_city=NA&billing_state=NA&billing_zip=100001&billing_country=INDIA&billing_tel=${user?.user?.phoneNumber}&billing_email=${user?.user?.email}&delivery_name=${user?.user?.fullName}&delivery_address=NA&delivery_city=NA&delivery_state=NA&delivery_zip=100001&delivery_country=INDIA&delivery_tel=${user?.user?.phoneNumber}&merchant_param1=${donationId}&integration_type=iframe_normal&si_type=Fixed`;
+    const plainTextData = `tid=${tid}&merchant_id=404791&order_id=${tid}&currency=INR&amount=${donationData?.donationAmount }&redirect_url=https://ehundi-api.onrender.com/api/ccAvenue-response&cancel_url=https://ehundi-api.onrender.com/api/ccAvenue-response&language=EN&billing_name=${user?.user?.fullName}&billing_address=NA&billing_city=NA&billing_state=NA&billing_zip=100001&billing_country=INDIA&billing_tel=${user?.user?.phoneNumber}&billing_email=${user?.user?.email}&delivery_name=${user?.user?.fullName}&delivery_address=NA&delivery_city=NA&delivery_state=NA&delivery_zip=100001&delivery_country=INDIA&delivery_tel=${user?.user?.phoneNumber}&merchant_param1=${donationId}&integration_type=iframe_normal&si_type=Fixed&payment_option=OPTUPI`;
     
-
     useEffect(() => {
         // Function to get the encrypted data from the server
         const getEncryptedData = async () => {

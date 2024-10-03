@@ -8,6 +8,7 @@ import { clearAllItem } from "../../../../redux/Api/ClientApis/clientApi";
 import { BackHandler } from "react-native";
 import { logout } from "../../../../redux/Slice/signInSlice";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { allCategoriesAPI } from "../../../../redux/Slice/allCategories";
 
 
 export const useProfile = () => {
@@ -70,6 +71,10 @@ export const useProfile = () => {
     const handleCancel = () => {
         setIsModalVisible(false);
     };
+
+    useEffect(() => {
+        dispatch(allCategoriesAPI());
+      }, [dispatch]);
 
     return {
         onLogoutPress,

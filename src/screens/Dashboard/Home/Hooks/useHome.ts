@@ -18,7 +18,17 @@ export const useHome = () => {
   
    
 
-    const [homeData, _setHomeData] = useState<homeDataProps[]>([
+    const [ homeData, _setHomeData] = useState<homeDataProps[]>([
+        {
+            id: 4,
+            name: strings.home.danpeti,
+            image: IMAGES.danpeti
+        },
+        {
+            id: 0,
+            name: strings.home.poojaDonation,
+            image: IMAGES.poojaDonation
+        },
         {
             id: 1,
             name: strings.home.annaDan,
@@ -26,19 +36,10 @@ export const useHome = () => {
         },
         {
             id: 0,
-            name: strings.home.gauDan,
-            image: IMAGES.gauDaan
+            name: strings.home.upcomingPooja,
+            image: IMAGES.upcomingPooja
         },
-        {
-            id: 0,
-            name: strings.home.balajiSeva,
-            image: IMAGES.vigrahaSeva
-        },
-        {
-            id: 4,
-            name: strings.home.donations,
-            image: IMAGES.subhadraVigrahaSeva
-        },
+        
         // {
         //     id: 5,
         //     name: strings.home.radheShyamSeve,
@@ -65,7 +66,7 @@ export const useHome = () => {
 
     const onItemPress = (item: RouteProps) => {
         console.log(item);
-       item?.id == 0 ? navigation.navigate('Categories', { categoriesData: categoriesData,isCategories:true }): navigation.navigate('DonationDetail', { data: item }) 
+       item?.id == 0 ? navigation.navigate('Categories', { categoriesData: categoriesData,isCategories:true, categoryName:item?.name }): navigation.navigate('DonationDetail', { data: item }) 
     };
 
     return {

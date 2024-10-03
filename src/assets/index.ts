@@ -3,15 +3,16 @@ export const IMAGES = {
     bgImg: require("./images/Auth/bgImg.png"),
     logo: require("./images/Auth/logo.png"),
     aanDaan: require("./images/Home/aandann.png"),
-    gauDaan: require("./images/Home/gaudan.png"),
+    // gauDaan: require("./images/Home/gaudan.png"),
+    poojaDonation:require("./images/Home/poojaDonation.png"),
     saadhuBhojan: require("./images/Home/sadhu.png"),
     subhadraVigrahaSeva: require("./images/Home/jaganNath.png"),
-    vrindavanchandraVigrahaSeva: require("./images/Home/radhaKrishna.png"),
+    // vrindavanchandraVigrahaSeva: require("./images/Home/radhaKrishna.png"),
     vigrahaSeva: require("./images/Home/krishna.png"),
+    danpeti: require("./images/Home/danpeti.png"),
+    upcomingPooja:require("./images/Home/upcoming.png"),
     dummyUserImg: require("./images/Home/dummyUser.png"),
     prashadImg: require("./images/Home/prashad.png"),
-
-
     // Icons
     backIcon: require("./icons/back.png"),
     openEyeIcon: require("./icons/openEye.png"),

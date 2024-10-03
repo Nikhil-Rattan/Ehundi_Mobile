@@ -11,14 +11,14 @@ export const styles = StyleSheet.create({
     },
     itemContainer: {
         flex: 0.555,
-        marginVertical: verticalScale(10),
-        marginHorizontal: verticalScale(6),
+        marginVertical: verticalScale(15),
+        marginHorizontal: verticalScale(10),
         alignItems: 'center',
         backgroundColor: COLORS.PRIMARY_WHITE,
         borderRadius: verticalScale(15),
         paddingHorizontal: verticalScale(15),
         paddingTop: verticalScale(10),
-        paddingBottom: verticalScale(1)
+        paddingBottom: verticalScale(10)
     },
     itemText: {
         ...commonStyles.medium14,

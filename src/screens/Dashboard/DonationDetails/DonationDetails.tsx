@@ -171,12 +171,18 @@ isSelected ? styles.selectedText : null]
           <Text style={styles.donationTxtStyle}>
             {data?.name?.toUpperCase()}
           </Text>
-          <Image
-          //  source={{
-          //   uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/512px-PNG_transparency_demonstration_1.png',
-          // }}
-           source={{uri: data.image}} 
+          {
+          data?.subcategories?.length > 0 ? (
+            <Image
+            source={{uri: data.image}}
            style={styles.imgStyle} />
+          ) : (
+            <Image
+            source={data.image}  
+           style={styles.imgStyle} />
+          )
+          }
+          
       { data?.subcategories?.length === 0 || data?.subcategories== undefined  &&     <Text style={styles.paragraphStlye}>
             {strings.donationDetail.poojaDonation}
           </Text>
@@ -379,7 +385,9 @@ isSelected ? styles.selectedText : null]
               <Text style={styles.errorStyle}>{amountError}</Text>
             ) : null}
           </View>}
-       
+          <Text style={[styles.errorStyle, {marginTop:20, marginBottom:0, padding:0, color:'yellow'}]}>
+       Kindly process donation payments using UPI Id Only.
+       </Text>
           
           <CustomButton
             title={strings.donationDetail.donateNow?.toUpperCase()}
