@@ -25,7 +25,10 @@ const Profile = () => {
   } = useProfile();
   const { userData } = useSelector((state: AllReducer) => state.auth || {});
   const user = useSelector((state) => state.signIn.signData);
+  const { userDonationData } = useSelector((state) => state.donationdata);
 
+  console.log(userDonationData,"909090909090900909090");
+  
   // Sample donation data
 const donations = [
   {
@@ -84,20 +87,22 @@ const donations = [
   );
 
   const renderItem = ({ item }) => (
+    // console.log(item,"yieruiotuo")
+    
     <View style={[styles.itemContainer]}>
-        <Text style={styles.title}>Pooja Names: <Text style={styles.poojaNames}>{item.poojaNames.join(', ')}</Text></Text>
+        <Text style={styles.title}>Pooja Names: <Text style={styles.name}>{item.name}</Text></Text>
         
         <Text style={styles.title}>Donation Amount: <Text style={styles.amount}>{item.donationAmount}</Text></Text>
         
-        <Text style={styles.title}>Pooja in the Name of: <Text style={styles.name}>{item.poojaInNameOf}</Text></Text>
+        <Text style={styles.title}>Pooja in the Name of: <Text style={styles.name}>{item.poojaDate}</Text></Text>
         
-        <Text style={styles.title}>Pooja Date: <Text style={styles.date}>{item.poojaDate}</Text></Text>
+        {/* <Text style={styles.title}>Pooja Date: <Text style={styles.date}>{item.poojaDate}</Text></Text> */}
         
-        <Text style={styles.title}>Nakshatra: <Text style={styles.nakshatra}>{item.nakshatra}</Text></Text>
+        <Text style={styles.title}>Nakshatra: <Text style={styles.nakshatra}>{item.gotra}</Text></Text>
         
-        <Text style={styles.title}>Star: <Text style={styles.star}>{item.star}</Text></Text>
+        {/* <Text style={styles.title}>Star: <Text style={styles.star}>{item.star}</Text></Text> */}
         
-        <Text style={styles.title}>Status: <Text style={styles.status}>{item.status}</Text></Text>
+        {/* <Text style={styles.title}>Status: <Text style={styles.status}>{item.status}</Text></Text> */}
         
     </View>
 );
@@ -165,7 +170,7 @@ const donations = [
         </View>
         <View >
         <FlatList
-            data={donations}
+            data={userDonationData?.donations}
             renderItem={renderItem}
             keyExtractor={item => item.id}
         />

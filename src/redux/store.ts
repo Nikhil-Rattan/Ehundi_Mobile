@@ -17,12 +17,16 @@ import {clientApi} from './Api/ClientApis/clientApi';
 import signInSlice from './Slice/signInSlice';
 import allCategoriesReducer from './Slice/allCategories';
 import createDonationReducer from './Slice/createDonation';
+import newDonationReducer from './Slice/allDonation'
 const reducer = combineReducers({
   auth: authSlice,
   signUp: signupReducer,
   signIn: signInSlice,
   categories:allCategoriesReducer,
   donation:createDonationReducer,
+  donationdata: newDonationReducer,
+
+  
 
   [clientApi.reducerPath]: clientApi.reducer,
 });

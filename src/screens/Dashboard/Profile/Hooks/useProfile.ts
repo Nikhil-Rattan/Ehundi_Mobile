@@ -9,6 +9,7 @@ import { BackHandler } from "react-native";
 import { logout } from "../../../../redux/Slice/signInSlice";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { allCategoriesAPI } from "../../../../redux/Slice/allCategories";
+import { fetchDonationsAPI } from "../../../../redux/Slice/allDonation";
 
 
 export const useProfile = () => {
@@ -19,6 +20,7 @@ export const useProfile = () => {
 
     const user = useSelector((state) => state.signIn.signData);
 // console.log(user,"------------------------------------------------------");
+
 
     const handleBackPress = () => {
         if (isEditView) {
@@ -74,6 +76,8 @@ export const useProfile = () => {
 
     useEffect(() => {
         dispatch(allCategoriesAPI());
+        dispatch(fetchDonationsAPI());
+
       }, [dispatch]);
 
     return {
