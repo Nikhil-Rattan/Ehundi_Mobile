@@ -89,14 +89,15 @@ const donations = [
   const renderItem = ({ item }) => (
     // console.log(item,"yieruiotuo")
     
+    // {"__v": 0, "_id": "66fd05dc0c1dd2a070b5c76b", "createdAt": "2024-10-02T08:35:40.085Z", "donationAmount": 1500, "files": [], "gotra": "Garg", "name": "Mohit Garg", "paymentStatus": "unpaid", "poojaDate": "2024-10-10T00:00:00.000Z", "poojaId": [], "updatedAt": "2024-10-02T08:35:40.085Z", "user": null}
     <View style={[styles.itemContainer]}>
         <Text style={styles.title}>Pooja Names: <Text style={styles.name}>{item.name}</Text></Text>
         
         <Text style={styles.title}>Donation Amount: <Text style={styles.amount}>{item.donationAmount}</Text></Text>
         
-        <Text style={styles.title}>Pooja in the Name of: <Text style={styles.name}>{item.poojaDate}</Text></Text>
+        <Text style={styles.title}>Pooja in the Name of: <Text style={styles.poojaNames}>Pooja</Text></Text>
         
-        {/* <Text style={styles.title}>Pooja Date: <Text style={styles.date}>{item.poojaDate}</Text></Text> */}
+        <Text style={styles.title}>Pooja Date: <Text style={styles.date}>{item.poojaDate}</Text></Text>
         
         <Text style={styles.title}>Nakshatra: <Text style={styles.nakshatra}>{item.gotra}</Text></Text>
         
