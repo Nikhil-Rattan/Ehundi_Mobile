@@ -16,6 +16,7 @@ export const useDonationDetails = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedDateForBackend, setSelectedDateForBackend] = useState('');
   const [userName, setUserName] = useState('');
+  const [star, setStar] = useState('');
   const [ids, setIds] = useState([]);
   const [userNameError, setUserNameError] = useState('');
   const[dateError,setDateError]=useState('');
@@ -38,6 +39,7 @@ console.log(data);
         const donationPayload = {
           user: user?.user?.userId,
           name: userName,
+          star: star,
           gotra: selectedOption,
           poojaDate: selectedDateForBackend,
           files: [],
@@ -154,6 +156,8 @@ console.log(data);
     setSelectedDateForBackend,
     userName,
     setUserName,
+    star,
+    setStar,
     ids,
     setIds,
     setUserNameError,

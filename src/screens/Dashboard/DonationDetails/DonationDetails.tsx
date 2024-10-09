@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 import {useDonationDetails} from './Hooks/useDonationDetails';
 import commonStyles from '../../../theme/commonStyles';
-import { Calendar } from 'react-native-calendars';
+import {Calendar} from 'react-native-calendars';
 
 import {
   Loader,
@@ -29,7 +29,7 @@ import {COLORS} from '../../../theme/colors';
 import strings from '../../../localization';
 import {DonationRouteProps} from 'src/types/DonationDetail';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import { Dropdown } from 'react-native-element-dropdown';
+import {Dropdown} from 'react-native-element-dropdown';
 
 const DonationDetails = ({route}) => {
   const {data}: DonationRouteProps = route.params;
@@ -43,41 +43,51 @@ const DonationDetails = ({route}) => {
     validateAmount,
     selectedOption,
     setSelectedOption,
-    selectedDate, setSelectedDate,
-    selectedDateForBackend, setSelectedDateForBackend,
-    userName, setUserName,
-    ids, setIds,
+    selectedDate,
+    setSelectedDate,
+    selectedDateForBackend,
+    setSelectedDateForBackend,
+    userName,
+    setUserName,
+    star,
+    setStar,
+    ids,
+    setIds,
     userNameError,
     dateError,
-    idsError
-
+    idsError,
   } = useDonationDetails();
 
-
   const [selectedItems, setSelectedItems] = useState([]);
-const [isCalendarVisible, setCalendarVisible] = useState(false);
-const formatDate = (date) => {
-  const { day, month, year } = date;
-  return `${String(day).padStart(2, '0')}-${String(month).padStart(2, '0')}-${year}`;
-};
+  const [isCalendarVisible, setCalendarVisible] = useState(false);
+  const formatDate = date => {
+    const {day, month, year} = date;
+    return `${String(day).padStart(2, '0')}-${String(month).padStart(
+      2,
+      '0',
+    )}-${year}`;
+  };
 
-const onDateSelect = (day) => {
-  const formattedDate = formatDate(day);
-setSelectedDateForBackend(day?.dateString)
+  const tomorrowDate = new Date(new Date().setDate(new Date().getDate() + 2)).toISOString().split('T')[0];
+
+console.log("tomorrowDate ", tomorrowDate );
+
+  const onDateSelect = day => {
+    const formattedDate = formatDate(day);
+    setSelectedDateForBackend(day?.dateString);
     setSelectedDate(formattedDate);
-    setCalendarVisible(false); 
-}
+    setCalendarVisible(false);
+  };
 
-const dropdownOptions = [
-  { label: 'AGASTHYA', value: 'AGASTHYA' },
-  { label: 'ATHREYA', value: 'ATHREYA' },
-  { label: 'BHARADWAJA', value: 'BHARADWAJA' },
-  { label: 'BHARGAVA', value: 'BHARGAVA' },
-  { label: 'CHANDILYA', value: 'CHANDILYA' },
-  { label: 'DHANANJAY', value: 'DHANANJAY' },
-  { label: 'BHARADWAJA', value: 'BHARADWAJA' },
-
-];
+  const dropdownOptions = [
+    {label: 'AGASTHYA', value: 'AGASTHYA'},
+    {label: 'ATHREYA', value: 'ATHREYA'},
+    {label: 'BHARADWAJA', value: 'BHARADWAJA'},
+    {label: 'BHARGAVA', value: 'BHARGAVA'},
+    {label: 'CHANDILYA', value: 'CHANDILYA'},
+    {label: 'DHANANJAY', value: 'DHANANJAY'},
+    {label: 'BHARADWAJA', value: 'BHARADWAJA'},
+  ];
   const handleItemPress = item => {
     if (selectedItems.some(selectedItem => selectedItem._id === item._id)) {
       setSelectedItems(
@@ -88,27 +98,26 @@ const dropdownOptions = [
     }
   };
   console.log(selectedItems);
-  
 
   useEffect(() => {
-      const extractedIds = selectedItems.map(item => item._id);
-      setIds(extractedIds);
+    const extractedIds = selectedItems.map(item => item._id);
+    setIds(extractedIds);
   }, [selectedItems]);
   useEffect(() => {
     setAmount(calculateTotalPrice(selectedItems));
-}, [selectedItems]);
+  }, [selectedItems]);
 
-const sumPrices = (items) => {
-  return items.reduce((total, item) => {
-    return total + (Number(item.price) || 0); 
-    }, 0);
-};
-
-const calculateTotalPrice = (items) => {
+  const sumPrices = items => {
     return items.reduce((total, item) => {
-        return total + parseFloat(item.price); 
+      return total + (Number(item.price) || 0);
     }, 0);
-};
+  };
+
+  const calculateTotalPrice = items => {
+    return items.reduce((total, item) => {
+      return total + parseFloat(item.price);
+    }, 0);
+  };
 
   const renderItem = ({
     item,
@@ -121,16 +130,19 @@ const calculateTotalPrice = (items) => {
 
     return (
       <TouchableOpacity
-        style={[styles.itemContainer,
-            isSelected ? styles.selectedItemContainer : null 
-
+        style={[
+          styles.itemContainer,
+          isSelected ? styles.selectedItemContainer : null,
         ]}
         activeOpacity={0.95}
         onPress={() => handleItemPress(item)}>
-        <Text style={[styles.itemTextcard,
-isSelected ? styles.selectedText : null]
-
-        }>{item.name}</Text>
+        <Text
+          style={[
+            styles.itemTextcard,
+            isSelected ? styles.selectedText : null,
+          ]}>
+          {item.name}
+        </Text>
 
         {/* <Image
           // source={{
@@ -141,7 +153,11 @@ isSelected ? styles.selectedText : null]
         /> */}
 
         {/* <Image source={item.image} style={commonStyles.icon120} /> */}
-        <Text style={[styles.itemTextcard,isSelected ? styles.selectedText : null]}>
+        <Text
+          style={[
+            styles.itemTextcard,
+            isSelected ? styles.selectedText : null,
+          ]}>
           {' '}
           {strings.placeHolder.rupee} {item?.price}
         </Text>
@@ -171,26 +187,20 @@ isSelected ? styles.selectedText : null]
           <Text style={styles.donationTxtStyle}>
             {data?.name?.toUpperCase()}
           </Text>
-          {
-          data?.subcategories?.length > 0 ? (
-            <Image
-            source={{uri: data.image}}
-           style={styles.imgStyle} />
+          {data?.subcategories?.length > 0 ? (
+            <Image source={{uri: data.image}} style={styles.imgStyle} />
           ) : (
-            <Image
-            source={data.image}  
-           style={styles.imgStyle} />
-          )
-          }
-          
-      { data?.subcategories?.length === 0 || data?.subcategories== undefined  &&     <Text style={styles.paragraphStlye}>
-            {strings.donationDetail.poojaDonation}
-          </Text>
-        }
+            <Image source={data.image} style={styles.imgStyle} />
+          )}
+
+          {data?.subcategories?.length === 0 ||
+            (data?.subcategories == undefined && (
+              <Text style={styles.paragraphStlye}>
+                {strings.donationDetail.poojaDonation}
+              </Text>
+            ))}
           {data?.subcategories?.length > 0 && (
-            <Text style={styles.paragraphStlye}>
-              {data?.description}
-            </Text>
+            <Text style={styles.paragraphStlye}>{data?.description}</Text>
           )}
           {data?.subcategories?.length > 0 && (
             <Text style={styles.donationTxtStyle}>
@@ -199,85 +209,107 @@ isSelected ? styles.selectedText : null]
           )}
           {data?.subcategories?.length > 0 && (
             <>
-            <FlatList
-              data={data?.subcategories}
-              keyExtractor={item => item._id}
-              renderItem={renderItem}
-              numColumns={2}
-              contentContainerStyle={styles.paragraphStlye}
-              showsVerticalScrollIndicator={false}
-            />
-           
-
-         
+              <FlatList
+                data={data?.subcategories}
+                keyExtractor={item => item._id}
+                renderItem={renderItem}
+                numColumns={2}
+                contentContainerStyle={styles.paragraphStlye}
+                showsVerticalScrollIndicator={false}
+              />
             </>
           )}
           {/* idsError */}
           {idsError && data?.subcategories?.length ? (
-              <Text style={styles.errorStyle}>{userNameError}</Text>
-            ) : null
-            }
+            <Text style={styles.errorStyle}>{userNameError}</Text>
+          ) : null}
 
           {selectedItems.length > 0 && (
             <View style={{}}>
               {/* <Text style={styles.itemTextcard}>Selected Items:</Text> */}
-            
-              <View style={[styles.inputContainer]}>
-              <Text style={{ ...styles.donationTxtStyle,marginTop:2,fontSize:20 }}>Please submit below details</Text>
-              <TextInput
-        // style={styles.input}
-        placeholder="Pooja in the name of "
-        placeholderTextColor={"black"}
-        value={userName}
-        onChangeText={setUserName}
-        style={{...styles.inputStyle,backgroundColor:"white",borderRadius:6,marginVertical:5}}
-     
-      //   editable={!data?.subcategories}
-        // keyboardType={'phone-pad'}
-        // maxLength={10}
-        cursorColor={COLORS.PRIMARY_ORANGE}
-      />    
-         {userNameError ? (
-              <Text style={styles.errorStyle}>{userNameError}</Text>
-            ) : null
-            }
-            
-        
-          <Dropdown
-        style={styles.dropdown}
-        // backgroundColor={'black'}
-        placeholderStyle={{color:"black"}}
-        selectedTextStyle={{color:'black',fontSize: 16}}
-        inputSearchStyle={{color:'black',    fontSize: 16}}
-       
-      itemTextStyle={{color:"black"}}
-        data={dropdownOptions}
-        labelField="label"
-        valueField="value"
-      
-        placeholder="Select Gotram"
-        value={selectedOption}
-        onChange={item => {
-          setSelectedOption(item.value);
-        }}
-      />
-          {dateError ? (
-              <Text style={styles.errorStyle}>{dateError}</Text>
-            ) : null
-            }
 
-<TouchableOpacity onPress={() => setCalendarVisible(true)}>
+              <View style={[styles.inputContainer]}>
                 <Text
-        style={{...styles.inputStyle,backgroundColor:"white",borderRadius:6,marginVertical:5,}}
-        >
-                    {selectedDate ? selectedDate : 'Select date for pooja'}
+                  style={{
+                    ...styles.donationTxtStyle,
+                    marginTop: 2,
+                    fontSize: 20,
+                  }}>
+                  Please submit below details
                 </Text>
-            </TouchableOpacity>
-            {dateError ? (
-              <Text style={styles.errorStyle}>{dateError}</Text>
-            ) : null
-            }
-{/* 
+                <TextInput
+                  // style={styles.input}
+                  placeholder="Pooja in the name of "
+                  placeholderTextColor={'black'}
+                  value={userName}
+                  onChangeText={setUserName}
+                  style={{
+                    ...styles.inputStyle,
+                    backgroundColor: 'white',
+                    borderRadius: 6,
+                    marginVertical: 5,
+                  }}
+                  //   editable={!data?.subcategories}
+                  // keyboardType={'phone-pad'}
+                  // maxLength={10}
+                  cursorColor={COLORS.PRIMARY_ORANGE}
+                />
+                {userNameError ? (
+                  <Text style={styles.errorStyle}>{userNameError}</Text>
+                ) : null}
+
+                <Dropdown
+                  style={styles.dropdown}
+                  // backgroundColor={'black'}
+                  placeholderStyle={{color: 'black'}}
+                  selectedTextStyle={{color: 'black', fontSize: 16}}
+                  inputSearchStyle={{color: 'black', fontSize: 16}}
+                  itemTextStyle={{color: 'black'}}
+                  data={dropdownOptions}
+                  labelField="label"
+                  valueField="value"
+                  placeholder="Select Gotram"
+                  value={selectedOption}
+                  onChange={item => {
+                    setSelectedOption(item.value);
+                  }}
+                />
+                {dateError ? (
+                  <Text style={styles.errorStyle}>{dateError}</Text>
+                ) : null}
+
+                <TextInput
+                  placeholder="Star"
+                  placeholderTextColor={'black'}
+                  value={star}
+                  onChangeText={setStar}
+                  style={{
+                    ...styles.inputStyle,
+                    backgroundColor: 'white',
+                    borderRadius: 6,
+                    marginVertical: 5,
+                  }}
+                  cursorColor={COLORS.PRIMARY_ORANGE}
+                />
+                {/* {userNameError ? (
+                  <Text style={styles.errorStyle}>{userNameError}</Text>
+                ) : null} */}
+
+                <TouchableOpacity onPress={() => setCalendarVisible(true)}>
+                  <Text
+                    style={{
+                      ...styles.inputStyle,
+                      backgroundColor: 'white',
+                      borderRadius: 6,
+                      marginVertical: 5,
+                    }}>
+                    {selectedDate ? selectedDate : 'Select date for pooja'}
+                  </Text>
+                </TouchableOpacity>
+                {dateError ? (
+                  <Text style={styles.errorStyle}>{dateError}</Text>
+                ) : null}
+                {/* 
               {isCalendarVisible && (
                   <View style={{ position: 'absolute',
                     top: 100, // Adjust as needed
@@ -296,7 +328,6 @@ isSelected ? styles.selectedText : null]
                   </View>
               )} */}
 
-      
                 <View style={[styles.inputContainerView]}>
                   <View style={styles.countryCodeContainer}>
                     <Text style={commonStyles.regular16}>
@@ -310,88 +341,92 @@ isSelected ? styles.selectedText : null]
                         
                       </Text>
                     ))} */}
-                                <Text style={{...styles.inputStyle}}>
-                                {sumPrices(selectedItems)}
-                                </Text>
-  {/* Total: {selectedItems.reduce((total, item) => total + (item.price || 0), 0)} */}
-
+                    <Text style={{...styles.inputStyle}}>
+                      {sumPrices(selectedItems)}
+                    </Text>
+                    {/* Total: {selectedItems.reduce((total, item) => total + (item.price || 0), 0)} */}
                   </View>
                 </View>
               </View>
             </View>
           )}
 
-       { data?.subcategories== undefined &&
-          <View style={[styles.inputContainer]}>
-            <View style={[styles.inputContainerView]}>
-              <View style={styles.countryCodeContainer}>
-                <Text style={commonStyles.regular16}>
-                  {strings.placeHolder.rupee}
-                </Text>
-              </View>
-              <View style={styles.inputFlex}>
-                {!amount && (
-                  <Text style={styles.customPlaceholder}>
-                    {strings.placeHolder.INR}
+          {data?.subcategories == undefined && (
+            <View style={[styles.inputContainer]}>
+              <View style={[styles.inputContainerView]}>
+                <View style={styles.countryCodeContainer}>
+                  <Text style={commonStyles.regular16}>
+                    {strings.placeHolder.rupee}
                   </Text>
-                )}
-                <TextInput
-                  style={{...styles.inputStyle}}
-                  value={amount}
-                  onChangeText={(value: string) => {
-                    setAmount(value), validateAmount(value);
-                  }}
-                //   editable={!data?.subcategories}
-                  keyboardType={'phone-pad'}
-                  maxLength={10}
-                  cursorColor={COLORS.PRIMARY_ORANGE}
-                />
+                </View>
+                <View style={styles.inputFlex}>
+                  {!amount && (
+                    <Text style={styles.customPlaceholder}>
+                      {strings.placeHolder.INR}
+                    </Text>
+                  )}
+                  <TextInput
+                    style={{...styles.inputStyle}}
+                    value={amount}
+                    onChangeText={(value: string) => {
+                      setAmount(value), validateAmount(value);
+                    }}
+                    //   editable={!data?.subcategories}
+                    keyboardType={'phone-pad'}
+                    maxLength={10}
+                    cursorColor={COLORS.PRIMARY_ORANGE}
+                  />
+                </View>
               </View>
+              {amountError ? (
+                <Text style={styles.errorStyle}>{amountError}</Text>
+              ) : null}
             </View>
-            {amountError ? (
-              <Text style={styles.errorStyle}>{amountError}</Text>
-            ) : null}
-          </View>
-          }
+          )}
 
-{ data?.subcategories?.length === 0 &&
-          <View style={[styles.inputContainer]}>
-            <View style={[styles.inputContainerView]}>
-              <View style={styles.countryCodeContainer}>
-                <Text style={commonStyles.regular16}>
-                  {strings.placeHolder.rupee}
-                </Text>
-              </View>
-              <View style={styles.inputFlex}>
-                {!amount && (
-                  <Text style={styles.customPlaceholder}>
-                    {strings.placeHolder.INR}
+          {data?.subcategories?.length === 0 && (
+            <View style={[styles.inputContainer]}>
+              <View style={[styles.inputContainerView]}>
+                <View style={styles.countryCodeContainer}>
+                  <Text style={commonStyles.regular16}>
+                    {strings.placeHolder.rupee}
                   </Text>
-                )}
-                <TextInput
-                  style={{...styles.inputStyle}}
-                  value={amount}
-                  onChangeText={(value: string) => {
-                    setAmount(value), validateAmount(value);
-                  }}
-                //   editable={!data?.subcategories}
-                  keyboardType={'phone-pad'}
-                  maxLength={10}
-                  cursorColor={COLORS.PRIMARY_ORANGE}
-                />
+                </View>
+                <View style={styles.inputFlex}>
+                  {!amount && (
+                    <Text style={styles.customPlaceholder}>
+                      {strings.placeHolder.INR}
+                    </Text>
+                  )}
+                  <TextInput
+                    style={{...styles.inputStyle}}
+                    value={amount}
+                    onChangeText={(value: string) => {
+                      setAmount(value), validateAmount(value);
+                    }}
+                    //   editable={!data?.subcategories}
+                    keyboardType={'phone-pad'}
+                    maxLength={10}
+                    cursorColor={COLORS.PRIMARY_ORANGE}
+                  />
+                </View>
               </View>
+              {amountError ? (
+                <Text style={styles.errorStyle}>{amountError}</Text>
+              ) : null}
             </View>
-            {amountError ? (
-              <Text style={styles.errorStyle}>{amountError}</Text>
-            ) : null}
-          </View>}
-          <Text style={[styles.errorStyle, {marginTop:20, marginBottom:0, padding:0, color:'yellow'}]}>
-       Kindly process donation payments using UPI Id Only.
-       </Text>
-          
+          )}
+          <Text
+            style={[
+              styles.errorStyle,
+              {marginTop: 20, marginBottom: 0, padding: 0, color: 'yellow'},
+            ]}>
+            Kindly process donation payments using UPI Id Only.
+          </Text>
+
           <CustomButton
-            title={strings.donationDetail.donateNow?.toUpperCase()}
-            onPress={()=>onDonateBtnPress(data)}
+            title={data?.subcategories?.length > 0 ? strings.donationDetail.bookPooja?.toUpperCase() : strings.donationDetail.donateNow?.toUpperCase()}
+            onPress={() => onDonateBtnPress(data)}
             customizeBtnStyle={styles.btnBackgroundColor}
             btnTxtStyle={styles.txtColor}
           />
@@ -406,25 +441,27 @@ isSelected ? styles.selectedText : null]
             <Loader loading={loading ? loading : false} />
           </View>
         )}
-               <Modal
-                visible={isCalendarVisible}
-                transparent={true}
-                animationType="slide"
-            >
-                <View style={styles.modalBackground}>
-                    <View style={styles.modalContainer}>
-                        <Calendar
-                            onDayPress={onDateSelect}
-                            markedDates={{
-                                [selectedDate]: { selected: true, marked: true, selectedColor: 'blue' },
-                            }}
-                        />
-                        {/* <Button title="Close" onPress={() => setCalendarVisible(false)} /> */}
-
-                    </View>
-                </View>
-            </Modal>
-        
+        <Modal
+          visible={isCalendarVisible}
+          transparent={true}
+          animationType="slide">
+          <View style={styles.modalBackground}>
+            <View style={styles.modalContainer}>
+              <Calendar
+              minDate = {tomorrowDate }
+                onDayPress={onDateSelect}
+                markedDates={{
+                  [selectedDate]: {
+                    selected: true,
+                    marked: true,
+                    selectedColor: 'blue',
+                  },
+                }}
+              />
+              {/* <Button title="Close" onPress={() => setCalendarVisible(false)} /> */}
+            </View>
+          </View>
+        </Modal>
       </SafeAreaView>
     </ImageBackground>
   );

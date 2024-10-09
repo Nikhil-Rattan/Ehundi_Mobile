@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import apiClient from '../apiClient';
 import { API_ENDPOINTS } from '../api'; 
-interface Category {
+interface   Category {
   id: string;
   name: string;
 }
@@ -12,11 +12,17 @@ interface AuthState {
   error: string | null;
 }
 
-export const allCategoriesAPI = createAsyncThunk<Category[], void>(
+export const allCategoriesAPI = createAsyncThunk<Category[], {_poojaName: string;}>(
   'categories/fetchAll', 
-  async (_, { rejectWithValue }) => {
+  async (_poojaName, { rejectWithValue }) => {
     try {
-      const response = await apiClient.get(API_ENDPOINTS.CATEGORIES);
+      // console.log(_poojaName,"909090000000000000000");
+      
+      const response = await apiClient.get(`${API_ENDPOINTS.CATEGORIES}?poojaCategory=${_poojaName}`);
+      console.log(`${API_ENDPOINTS.CATEGORIES}?poojaCategory=${_poojaName}`);
+      
+
+      // const response = await apiClient.get(API_ENDPOINTS.CATEGORIES,_poojaName);
       return response.data; 
     } catch (error) {
       console.error(error.response, 'Error fetching categories');

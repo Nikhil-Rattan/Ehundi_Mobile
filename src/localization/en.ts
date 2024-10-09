@@ -1,5 +1,6 @@
 export const en = {
     common: {
+        samaj: 'Sri Subramania Samaj',
         ehundi: 'E-Hundi',
         copyRightTxt: '© SRI SUBRAMANIA SAMAJ',
         camera: "Camera",
@@ -36,8 +37,8 @@ export const en = {
     home:{
         donations:"Donations",
         danpeti: "Dan Peti",
-        annaDan:"Ann Danam",
-        poojaDonation:"Pooja Donation",
+        annaDan:"Anna Dhanam",
+        poojaDonation:"Pooja Booking",
         upcomingPooja:"Upcoming Pooja",
         // jaganNathSeva:"Education Donation",
         // radheShyamSeve:"Annadhanam",
@@ -47,6 +48,7 @@ export const en = {
     },
     donationDetail:{
         donateNow:'Donate Now',
+        bookPooja:'Book Pooja',
        poojaDonation: `The Samaj was conceived by a few like-minded devotees of Lord Subramania in the mid-forties in the central suburb of Matunga, the then 'mini-Madras' of Mumbai. These God-loving migrants from the south cherished their cultural heritage based on the bhakti-cult propounded by our ancient sages and saints. The bhakti-movement of south India culminated in the propitiation of divinity in all its forms and expression, involving the community as a whole.`
     },
     thankYou:{
