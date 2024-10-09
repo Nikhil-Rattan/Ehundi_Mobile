@@ -96,6 +96,7 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#ccc',
         borderRadius: 8,
+        marginBottom:20
     },
     title: {
         fontSize: 14,
